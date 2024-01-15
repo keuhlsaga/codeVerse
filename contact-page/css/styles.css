@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@200;400;500&display=swap');
+
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+textarea {
+    resize: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --gradient-color: #4036A9;
+    --input-color: #111729;
+    --placeholder-color: #aeb9c7;
+    --bg-color: #F8FAFC;
+    --text-color: #FFFFFF;
+}
+
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 1rem;
+    color: var(--text-color); 
+}
+
+.bg-image {
+    position: fixed;
+    z-index: -1;
+    min-width: 100%;
+}
+main {
+    background-image: url("images/bg-image.svg");
+}
+
+header {
+    padding: 15px 65px;
+}
+
+.container {
+    width: 810px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+h1 {
+    font-size: 4rem;
+    padding: 20px 0;
+}
+
+h2 {
+    font-size: 2rem;
+    padding-bottom: 75px;
+    max-width: 30ch;
+    margin: 0 auto;
+    font-weight: 500;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+label {
+    font-size: 0.875rem;
+    padding-bottom: 5px;
+}
+
+.contact-form {
+    height: auto;
+    padding: 32px;
+    border-radius: 1.5rem;
+    background-color: rgb(205, 213, 224, 0.2);
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-3-rows {
+    grid-template-rows: repeat(3);
+    gap: 1rem;
+}
+
+.grid-2-rows-cols {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.grid-2-rows {
+    grid-template-rows: repeat(2);
+    position: relative;
+}
+
+input[type="text"],
+select,
+textarea,
+button {
+    height: 70px;
+    border-radius: 15px;
+    padding: 0 1rem;
+    background-color: var(--bg-color);
+    font-weight: 600;
+    border: none;
+    color: var(--input-color);
+}
+
+input[type="text"]::placeholder {
+    color: var(--placeholder-color);
+}
+
+select {
+    appearance: none;
+    cursor: pointer;
+    width: 100%;    
+}
+
+.custom-select::before {
+    display: block;
+    content: url("../images/Expand_down.svg");
+    position: absolute;
+    right: 1rem;
+    top: 2.8rem;
+
+}
+
+textarea {
+    height: 200px;
+    padding-top: 1rem;
+}
+
+button {
+    font-size: 1.25rem;
+    color: var(--gradient-color);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--gradient-color);
+    color: var(--text-color);
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 960px;
+    }
+
+    h1 {
+        font-size: 2.9rem;
+        max-width: 15ch;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h2 {
+        font-size: 1.15rem;
+    }
+    
+    input[type="text"],
+    select,
+    textarea {
+        font-size: 1rem;
+    }
+
+    header {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        width: 592px;
+    }
+
+    .grid-2-rows-cols {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}

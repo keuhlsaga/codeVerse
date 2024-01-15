@@ -1,0 +1,136 @@
+/* @font-face {
+    font-family: 'Work Sans';
+    font-weight: 400, 600, 700;
+    src: url('/assets/fonts/WorkSans-VariableFont_wght.ttf') format('truetype');
+} */
+
+:root {
+    --mobile: 375px;
+    --desktop: 1440px;
+
+    --clr-neutral-100: hsl(0, 0%, 100%);
+
+    --clr-primary-300: hsl(275, 100%, 97%);
+    --clr-primary-400: hsl(292, 16%, 49%);
+    --clr-primary-500: hsl(292, 42%, 14%);
+
+    --fs-regular: 1rem;
+
+    --ff-primary: 'Work Sans', sans-serif;
+
+    --fw-regular: 400;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+p,
+h1 {
+    overflow-wrap: break-word;
+}
+
+body {
+    /* height: 100vh; */
+    /* min-height: 100vh;
+    padding-block: 25vh; */
+    font-family: var(--ff-primary);
+    font-size: var(--fs-regular);
+    color: var(--clr-primary-500);
+    line-height: 1.5;
+    background: url('assets/images/background-pattern-desktop.svg') center top no-repeat;
+
+    background-color: var(--clr-neutral-100);
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: var(--fw-bold);
+    font-size: clamp(2rem, -0.5rem + 10.6667vw, 3.5rem);
+}
+
+.container {
+    min-height: 100%;
+    padding: 25vh 1.5rem;
+}
+
+main {
+    width: 37.5rem;
+        max-width: 100%;
+    margin-inline: auto;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    background-color: var(--clr-neutral-100);
+    box-shadow: 0 0 20px -10px var(--clr-primary-500);
+}
+
+main header {
+    display: flex;
+    gap: 1.5rem;
+}
+
+details {
+    border-bottom: 1px solid var(--clr-primary-300);
+}
+
+summary {
+    padding-right: 3rem;
+    padding-block: 1.5rem;
+    position: relative;
+    list-style: none;
+    user-select: none;
+    outline: none;
+    cursor: pointer;
+    font-size: clamp(1rem, 0.8rem + 0.8533vw, 1.12rem);
+    font-weight: var(--fw-semibold);
+    line-height: clamp(1.2rem, 0.7rem + 2.1333vw, 1.5rem);
+}
+
+summary::after {
+    content: url('assets/images/icon-plus.svg');
+    display: inline-flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+details p {
+    font-size: clamp(0.875rem, 0.6667rem + 0.8889vw, 1rem);
+}
+
+details[open] {
+    border: none;
+    padding-bottom: 1.75rem;
+}
+
+details[open] summary::after {
+    content: url('assets/images/icon-minus.svg');
+}
+
+details p,
+summary:hover {
+    color: var(--clr-primary-400);
+}
+
+.star-icon {
+    width: clamp(1.5rem, -0.1667rem + 7.1111vw, 2.5rem);
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        background: url('assets/images/background-pattern-mobile.svg') center top no-repeat;
+    }
+
+    main {
+        padding: 1.25rem 1.5rem;
+    }
+}

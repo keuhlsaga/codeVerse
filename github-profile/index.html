@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Github Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="hero">
+        <nav>
+            <input type="text" class="nav__search-bar" id="search-bar" placeholder="username">
+            <div class="nav__search-result">
+                <a class="search-result__link hidden" id="search-result" href="javascript:void(0)">
+                    <div class="search-result__img"><img class="user-img" id="user-img"
+                            src="images/github-mark-white.png" alt=""></div>
+                    <div class="search-result__information">
+                        <p id="user-name">GitHub</p>
+                        <p class="information__bio" id="user-bio">How people build software.</p>
+                    </div>
+                </a>
+                <div class="not-found hidden">
+                    <p>Username does not exist.</p>
+                </div>
+                <div class="loader hidden">
+                    <div class="lds-ellipsis">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <img class="hero__image" src="images/hero-image-github-profile.png" alt="">
+    </header>
+    <div class="container">
+        <main>
+            <div class="profile">
+                <span class="profile__image">
+                    <img id="profile-image" src="images/github-mark-white.png" alt="">
+                </span>
+                <div class="profile__details">
+                    <div class="profile__detail">
+                        <p>Followers</p>
+                        <span class="profile-detail__divider"></span>
+                        <span class="profile__values" id="follower">27839</span>
+                    </div>
+                    <div class="profile__detail">
+                        <p>Following</p>
+                        <span class="profile-detail__divider"></span>
+                        <span class="profile__values" id="following">0</span>
+                    </div>
+                    <div class="profile__detail">
+                        <p>Location</p>
+                        <span class="profile-detail__divider"></span>
+                        <span class="profile__values" id="location">San Francisco, CA</span>
+                    </div>
+                </div>
+            </div>
+            <section>
+                <h1 id="profile-name">GitHub</h1>
+                <p id="profile-bio">How people build software.</p>
+                <div class="repositories">
+                    <div class="repository">
+                        <h2 class="repository__title">.github</h2>
+                        <p class="repository__description">Community health files for the @GitHub organization</p>
+                        <div class="flex-group">
+                            <img src="images/Nesting.svg" alt="">
+                            <p id="nest">2,369</p>
+                            <img src="images/Star.svg" alt="">
+                            <p id="star">703</p>
+                            <p>updated <span id="update">4</span> days ago</p>
+                        </div>
+                    </div>
+                    <div class="repository">
+                        <h2 class="repository__title">accessibility-alt-text-bot</h2>
+                        <p class="repository__description">An action to remind users to add alt text Issues, Pull
+                            Requests,
+                            and Discussions</p>
+                        <div class="flex-group">
+                            <img src="images/Chield_alt.svg" alt="">
+                            <p id="chield">MIT</p>
+                            <img src="images/Nesting.svg" alt="">
+                            <p id="nest">7</p>
+                            <img src="images/Star.svg" alt="">
+                            <p id="star">50</p>
+                            <p>updated <span id="update">3</span> days ago</p>
+                        </div>
+                    </div>
+                    <div class="repository">
+                        <h2 class="repository__title">accessibilityjs</h2>
+                        <p class="repository__description">Client side accessibility error scanner.</p>
+                        <div class="flex-group">
+                            <img src="images/Chield_alt.svg" alt="">
+                            <p id="chield">MIT</p>
+                            <img src="images/Nesting.svg" alt="">
+                            <p id="nest">72</p>
+                            <img src="images/Star.svg" alt="">
+                            <p id="star">2181</p>
+                            <p>updated <span id="update">4</span> days ago</p>
+                        </div>
+                    </div>
+                    <div class="repository">
+                        <h2 class="repository__title">actions-cheat-sheet</h2>
+                        <p class="repository__description">A cheat sheet for GitHub Actions</p>
+                        <div class="flex-group">
+                            <img src="images/Chield_alt.svg" alt="">
+                            <p id="chield">MIT</p>
+                            <img src="images/Nesting.svg" alt="">
+                            <p id="nest">26</p>
+                            <img src="images/Star.svg" alt="">
+                            <p id="star">194</p>
+                            <p>updated <span id="update">4</span> days ago</p>
+                        </div>
+                    </div>
+                </div>
+                <span class="link">
+                    <a href="">View all repositories</a>
+                </span>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Responsive Web Developer Starter - devchallenges.io</title>
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro"> -->
+</head>
+<body>
+    <main>
+        <img class="bg-image" src="images/bg-image.svg">
+        <header>
+            <img src="images/contact-form-icon.svg">
+        </header>
+        <section class="container">
+            <h1>Interested in our business pricing?</h1>
+            <h2>Fill out the form to view details and we’ll contact you as soon as possible.</h2>
+            <form class="contact-form">
+                <div class="grid grid-3-rows">
+                    <div class="grid grid-2-rows-cols">
+                        <div class="grid grid-2-rows">
+                            <label for="name">Name</label>
+                            <input type="text" placeholder="Ethan Johnson">
+                        </div>
+                        <div class="grid grid-2-rows">
+                            <label for="company-email">Company Email</label>
+                            <input type="text" placeholder="ethan@johnson.com">
+                        </div>
+                        <div class="grid grid-2-rows">
+                            <label for="company-size">Company Size</label>
+                            <!-- <img class="arrow-down" src="images/Expand_down.svg"> -->
+                            <div class="custom-select">
+                                <select name="company-size">
+                                    <option value="50-100">50-100 employees</option>
+                                    <option value="100-500">100-500 employees</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="grid grid-2-rows">
+                            <label for="subject">Subject</label>
+                            <div class="custom-select">
+                                <select name="subject">
+                                    <option class="option" value="building-landing-pages">Building Landing Pages</option>
+                                    <option class="option" value="building-landing-pages">Renting a Server</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-2-rows">
+                        <label for="subject">Message</label>
+                        <textarea name="message" id="message-ta" placeholder="50-100 employees"></textarea>
+                    </div>
+                    <button type="submit">Contact Sales</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

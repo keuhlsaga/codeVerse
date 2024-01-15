@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Country Page - WorldRanks</title>
+</head>
+<body>
+    <main>
+        <header class="hero">
+            <a class="logo" href="index.html">
+                <img src="images/Logo.svg" alt="World Ranks">
+            </a>
+        </header>
+        <section class="content-wrapper">
+            <div class="content" id="countries-content">
+                <div class="content-header">
+                    <p>Found <span id="result-count"></span> countries</p>
+                    <div class="search-bar">
+                        <input class="search-text" id="search-text" type="text" placeholder="Search by Name, Region, Subregion">
+                        <span class="search-icon"></span>
+                    </div>
+                </div>
+                <div class="content-body">
+                    <div class="filter-wrapper">
+                        <div class="filter-panel">
+                            <label for="sort-by">Sort by</label>
+                            <div class="customized">
+                                <span class="arrow-down"></span>
+                                <select class="sort-by" id="sort-by">
+                                    <option value="population">Population</option>
+                                    <option value="alphabetical">Alphabetical</option>
+                                    <option value="area">Area (km²)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="filter-panel">
+                            <label>Region</label>
+                            <div class="region">
+                                <input class="region-cb" type="checkbox" name="americas" id="americas" value="americas">
+                                <label class="region-cb-label" for="americas">Americas</label>
+                                <input class="region-cb" type="checkbox" name="antarctic" id="antarctic" value="antarctic">
+                                <label class="region-cb-label" for="antarctic">Antarctic</label>
+                                <input class="region-cb" type="checkbox" name="africa" id="africa" value="africa">
+                                <label class="region-cb-label" for="africa">Africa</label>
+                                <input class="region-cb" type="checkbox" name="asia" id="asia" value="asia">
+                                <label class="region-cb-label" for="asia">Asia</label>
+                                <input class="region-cb" type="checkbox" name="europe" id="europe" value="europe">
+                                <label class="region-cb-label" for="europe">Europe</label>
+                                <input class="region-cb" type="checkbox" name="oceania" id="oceania" value="oceania">
+                                <label class="region-cb-label" for="oceania">Oceania</label>
+                            </div>
+                        </div>
+                        <div class="filter-panel">
+                            <label for="status">Status</label>
+                            <div class="customized">
+                                <input class="status-cb" type="checkbox" name="member" id="member" value="unmember">
+                                <label class="status-cb-label" for="member" id="first-status">Member of the United Nations</label>
+                            </div>
+                            <div class="customized">
+                                <input class="status-cb" type="checkbox" name="independent" id="independent" value="independent">
+                                <label class="status-cb-label" for="independent">Independent</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="country-wrapper">
+                        <table class="country-table" id="country-table">
+                            <thead>
+                                <th>Flag</th>
+                                <th>Name</th>
+                                <th>Population</th>
+                                <th>Area (km²)</th>
+                                <th>Region</th>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
