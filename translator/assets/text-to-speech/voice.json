@@ -1,0 +1,3412 @@
+{
+  "config": {
+    "defaultVoice": {
+      "displayName": "John",
+      "engine": "neural",
+      "gender": "male",
+      "language": "en-US",
+      "localizedDisplayName": {},
+      "name": "Matthew",
+      "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-Matthew-neural.webp",
+      "labels": [],
+      "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-Matthew-neural.mp3"
+    },
+    "fallbackVoice": {
+      "displayName": "Mr. President",
+      "engine": "speechify",
+      "gender": "male",
+      "language": "en-US",
+      "localizedDisplayName": {},
+      "name": "Presidential",
+      "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-Presidential-speechify.webp",
+      "labels": [],
+      "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-Presidential-speechify.mp3"
+    }
+  },
+  "labels": [
+    {
+      "name": "ai-enhanced",
+      "displayName": "AI Enhanced",
+      "localizedDisplayName": {},
+      "style": "AI_ENHANCED"
+    },
+    {
+      "name": "beta",
+      "displayName": "Beta",
+      "localizedDisplayName": {},
+      "style": "BETA"
+    },
+    {
+      "name": "celebrity",
+      "displayName": "Celebrity",
+      "localizedDisplayName": {},
+      "style": "CELEBRITY"
+    },
+    {
+      "name": "premium",
+      "displayName": "Premium",
+      "localizedDisplayName": {},
+      "style": "PREMIUM"
+    }
+  ],
+  "tabs": [
+    {
+      "categories": [
+        {
+          "displayName": "All",
+          "localVoices": {
+            "languages": []
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Henry",
+              "engine": "speechify",
+              "gender": "male",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "henry",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-Henry-Speechify-gpttts.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-Henry-speechify-gpttts.mp3"
+            },
+            {
+              "displayName": "Erica",
+              "engine": "speechify",
+              "gender": "female",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "Bwyneth",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-Bwyneth-speechify-gpttts.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-Bwyneth-speechify-gpttts.mp3"
+            },
+            {
+              "displayName": "Snoop Dogg",
+              "engine": "resemble",
+              "gender": "male",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "snoop",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-snoop-resemble.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-snoop-resemble.mp3"
+            },
+            {
+              "displayName": "Mr. Beast",
+              "engine": "speechify",
+              "gender": "male",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "mrbeast",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-mrbeast-speechify.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-mrbeast-speechify.mp3"
+            },
+            {
+              "displayName": "Gwyneth Paltrow",
+              "engine": "speechify",
+              "gender": "female",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "gwyneth",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-gwyneth-speechify.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-gwyneth-speechify.mp3"
+            },
+            {
+              "displayName": "Cliff Weitzman",
+              "engine": "speechify",
+              "gender": "male",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "cliff",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-Cliff-speechify-gpttts.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-Cliff-speechify-gpttts.mp3"
+            },
+            {
+              "displayName": "David",
+              "engine": "azure",
+              "gender": "male",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "Guy",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-Guy-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-Guy-azure.mp3"
+            },
+            {
+              "displayName": "Jamie",
+              "engine": "azure",
+              "gender": "female",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "Jane",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-Jane-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-Jane-azure.mp3"
+            },
+            {
+              "displayName": "John",
+              "engine": "neural",
+              "gender": "male",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "Matthew",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-Matthew-neural.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-Matthew-neural.mp3"
+            }
+          ]
+        }
+      ],
+      "displayName": "Recommended",
+      "localizedDisplayName": {}
+    },
+    {
+      "categories": [
+        {
+          "displayName": "English",
+          "localVoices": {
+            "languages": [
+              "en"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Henry",
+              "engine": "speechify",
+              "gender": "male",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "henry",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-Henry-Speechify-gpttts.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-Henry-speechify-gpttts.mp3"
+            },
+            {
+              "displayName": "Erica",
+              "engine": "speechify",
+              "gender": "female",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "Bwyneth",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-Bwyneth-speechify-gpttts.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-Bwyneth-speechify-gpttts.mp3"
+            },
+            {
+              "displayName": "Snoop Dogg",
+              "engine": "resemble",
+              "gender": "male",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "snoop",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-snoop-resemble.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-snoop-resemble.mp3"
+            },
+            {
+              "displayName": "Mr. Beast",
+              "engine": "speechify",
+              "gender": "male",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "mrbeast",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-mrbeast-speechify.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-mrbeast-speechify.mp3"
+            },
+            {
+              "displayName": "Gwyneth Paltrow",
+              "engine": "speechify",
+              "gender": "female",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "gwyneth",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-gwyneth-speechify.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-gwyneth-speechify.mp3"
+            },
+            {
+              "displayName": "Cliff Weitzman",
+              "engine": "speechify",
+              "gender": "male",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "cliff",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-Cliff-speechify-gpttts.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-Cliff-speechify-gpttts.mp3"
+            },
+            {
+              "displayName": "Mr. President",
+              "engine": "speechify",
+              "gender": "male",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "Presidential",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-Presidential-speechify.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-Presidential-speechify.mp3"
+            },
+            {
+              "displayName": "David",
+              "engine": "azure",
+              "gender": "male",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "Guy",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-Guy-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-Guy-azure.mp3"
+            },
+            {
+              "displayName": "Jamie",
+              "engine": "azure",
+              "gender": "female",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "Jane",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-Jane-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-Jane-azure.mp3"
+            },
+            {
+              "displayName": "John",
+              "engine": "neural",
+              "gender": "male",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "Matthew",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-Matthew-neural.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-Matthew-neural.mp3"
+            },
+            {
+              "displayName": "Carly",
+              "engine": "speechify",
+              "gender": "female",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "carly",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-carly-speechify.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-carly-speechify.mp3"
+            },
+            {
+              "displayName": "Kyle",
+              "engine": "speechify",
+              "gender": "male",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "kyle",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-Kyle-speechify-gpttts.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-kyle-speechify-gpttts.mp3"
+            },
+            {
+              "displayName": "Kristy",
+              "engine": "speechify",
+              "gender": "female",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "kristy",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-Kristy-Speechify-gpttts.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-Kristy-speechify-gpttts.mp3"
+            },
+            {
+              "displayName": "Oliver",
+              "engine": "speechify",
+              "gender": "male",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "oliver",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-Oliver-Speechify-gpttts.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-Oliver-speechify-gpttts.mp3"
+            },
+            {
+              "displayName": "Tasha",
+              "engine": "speechify",
+              "gender": "female",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "tasha",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-tasha-speechify.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-tasha-speechify.mp3"
+            },
+            {
+              "displayName": "Joe",
+              "engine": "speechify",
+              "gender": "male",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "joe",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-joe-speechify.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-joe-speechify.mp3"
+            },
+            {
+              "displayName": "Lisa",
+              "engine": "speechify",
+              "gender": "female",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "lisa",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-lisa-speechify.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-lisa-speechify.mp3"
+            },
+            {
+              "displayName": "George",
+              "engine": "speechify",
+              "gender": "male",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "george",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-george-speechify.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-george-speechify.mp3"
+            },
+            {
+              "displayName": "Emily",
+              "engine": "speechify",
+              "gender": "female",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "emily",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-emily-speechify.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-emily-speechify.mp3"
+            },
+            {
+              "displayName": "Rob",
+              "engine": "speechify",
+              "gender": "male",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "rob",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-rob-speechify.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-rob-speechify.mp3"
+            },
+            {
+              "displayName": "Russell",
+              "engine": "speechify",
+              "gender": "male",
+              "language": "en-GB",
+              "localizedDisplayName": {},
+              "name": "russell",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-GB-russell-speechify.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-GB-russell-speechify.mp3"
+            },
+            {
+              "displayName": "Benjamin",
+              "engine": "speechify",
+              "gender": "male",
+              "language": "en-GB",
+              "localizedDisplayName": {},
+              "name": "benjamin",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-GB-benjamin-speechify.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-GB-benjamin-speechify.mp3"
+            },
+            {
+              "displayName": "Dwight",
+              "engine": "speechify",
+              "gender": "male",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "rainn-wilson",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-rainn-wilson-speechify.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-rainn-wilson-speechify.mp3"
+            },
+            {
+              "displayName": "Jessica",
+              "engine": "azure",
+              "gender": "female",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "Jenny",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-Jenny-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-Jenny-azure.mp3"
+            },
+            {
+              "displayName": "Aria",
+              "engine": "azure",
+              "gender": "female",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "Aria",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-Aria-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-Aria-azure.mp3"
+            },
+            {
+              "displayName": "Emma",
+              "engine": "neural",
+              "gender": "female",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "Joanna",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-Joanna-neural.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-Joanna-neural.mp3"
+            },
+            {
+              "displayName": "Nate",
+              "engine": "speechify",
+              "gender": "male",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "nate",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-Nate-speechify-gpttts.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-Nate-speechify-gpttts.mp3"
+            },
+            {
+              "displayName": "Mary",
+              "engine": "speechify",
+              "gender": "female",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "mary",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-Mary-speechify-gpttts.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-Mary-speechify-gpttts.mp3"
+            },
+            {
+              "displayName": "Sally",
+              "engine": "neural",
+              "gender": "female",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "Salli",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-Salli-neural.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-Salli-neural.mp3"
+            },
+            {
+              "displayName": "Alex Hormozi",
+              "engine": "omicron",
+              "gender": "male",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "alexhormozi",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-alexhormozi-omicron.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-alexhormozi-omicron.mp3"
+            },
+            {
+              "displayName": "Simon",
+              "engine": "neural",
+              "gender": "male",
+              "language": "en-US",
+              "localizedDisplayName": {},
+              "name": "Joey",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-US-Joey-neural.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-US-Joey-neural.mp3"
+            },
+            {
+              "displayName": "Tanner",
+              "engine": "azure",
+              "gender": "male",
+              "language": "en-GB",
+              "localizedDisplayName": {},
+              "name": "Ryan",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-GB-Ryan-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-GB-Ryan-azure.mp3"
+            },
+            {
+              "displayName": "Sophia",
+              "engine": "azure",
+              "gender": "female",
+              "language": "en-GB",
+              "localizedDisplayName": {},
+              "name": "Sonia",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-GB-Sonia-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-GB-Sonia-azure.mp3"
+            },
+            {
+              "displayName": "Rueben",
+              "engine": "azure",
+              "gender": "male",
+              "language": "en-GB",
+              "localizedDisplayName": {},
+              "name": "Oliver",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-GB-Oliver-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-GB-Oliver-azure.mp3"
+            },
+            {
+              "displayName": "Stephanie",
+              "engine": "neural",
+              "gender": "female",
+              "language": "en-GB",
+              "localizedDisplayName": {},
+              "name": "Amy",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-GB-Amy-neural.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-GB-Amy-neural.mp3"
+            },
+            {
+              "displayName": "Michael",
+              "engine": "speechify",
+              "gender": "male",
+              "language": "en-GB",
+              "localizedDisplayName": {},
+              "name": "michael",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-GB-Michael-speechify-gpttts.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-GB-Michael-speechify-gpttts.mp3"
+            },
+            {
+              "displayName": "Ethan",
+              "engine": "azure",
+              "gender": "male",
+              "language": "en-GB",
+              "localizedDisplayName": {},
+              "name": "Thomas",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-GB-Thomas-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-GB-Thomas-azure.mp3"
+            },
+            {
+              "displayName": "Lilly",
+              "engine": "azure",
+              "gender": "female",
+              "language": "en-GB",
+              "localizedDisplayName": {},
+              "name": "Libby",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-GB-Libby-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-GB-Libby-azure.mp3"
+            },
+            {
+              "displayName": "Narrator",
+              "engine": "resemble",
+              "gender": "male",
+              "language": "en-GB",
+              "localizedDisplayName": {},
+              "name": "narrator",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-GB-narrator-resemble.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-GB-narrator-resemble.mp3"
+            },
+            {
+              "displayName": "Harry",
+              "engine": "neural",
+              "gender": "male",
+              "language": "en-GB",
+              "localizedDisplayName": {},
+              "name": "Brian",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-GB-Brian-neural.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-GB-Brian-neural.mp3"
+            },
+            {
+              "displayName": "Sydney",
+              "engine": "azure",
+              "gender": "female",
+              "language": "en-AU",
+              "localizedDisplayName": {},
+              "name": "Natasha",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-AU-Natasha-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-AU-Natasha-azure.mp3"
+            },
+            {
+              "displayName": "Sebastian",
+              "engine": "azure",
+              "gender": "male",
+              "language": "en-AU",
+              "localizedDisplayName": {},
+              "name": "William",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-AU-William-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-AU-William-azure.mp3"
+            },
+            {
+              "displayName": "Kylie",
+              "engine": "azure",
+              "gender": "female",
+              "language": "en-AU",
+              "localizedDisplayName": {},
+              "name": "Freya",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-AU-Freya-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-AU-Freya-azure.mp3"
+            },
+            {
+              "displayName": "Caleb",
+              "engine": "azure",
+              "gender": "male",
+              "language": "en-AU",
+              "localizedDisplayName": {},
+              "name": "Ken",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-AU-Ken-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-AU-Ken-azure.mp3"
+            },
+            {
+              "displayName": "Isla",
+              "engine": "neural",
+              "gender": "female",
+              "language": "en-AU",
+              "localizedDisplayName": {},
+              "name": "Olivia",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-AU-Olivia-neural.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-AU-Olivia-neural.mp3"
+            },
+            {
+              "displayName": "Aditi",
+              "engine": "standard",
+              "gender": "female",
+              "language": "en-IN",
+              "localizedDisplayName": {},
+              "name": "Aditi",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-IN-Aditi-standard.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-IN-Aditi-standard.mp3"
+            },
+            {
+              "displayName": "Abubakar",
+              "engine": "azure",
+              "gender": "male",
+              "language": "en-NG",
+              "localizedDisplayName": {},
+              "name": "Abeo",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-NG-Abeo-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-NG-Abeo-azure.mp3"
+            },
+            {
+              "displayName": "Amina",
+              "engine": "azure",
+              "gender": "female",
+              "language": "en-NG",
+              "localizedDisplayName": {},
+              "name": "Ezinne",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-NG-Ezinne-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-NG-Ezinne-azure.mp3"
+            },
+            {
+              "displayName": "Mandla",
+              "engine": "azure",
+              "gender": "male",
+              "language": "en-ZA",
+              "localizedDisplayName": {},
+              "name": "Luke",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-ZA-Luke-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-ZA-Luke-azure.mp3"
+            },
+            {
+              "displayName": "Amahle",
+              "engine": "azure",
+              "gender": "female",
+              "language": "en-ZA",
+              "localizedDisplayName": {},
+              "name": "Leah",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/en-ZA-Leah-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/en-ZA-Leah-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Afrikaans",
+          "localVoices": {
+            "languages": [
+              "af"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Pieter",
+              "engine": "azure",
+              "gender": "male",
+              "language": "af-ZA",
+              "localizedDisplayName": {},
+              "name": "Willem",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/af-ZA-Willem-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/af-ZA-Willem-azure.mp3"
+            },
+            {
+              "displayName": "Elizma",
+              "engine": "azure",
+              "gender": "female",
+              "language": "af-ZA",
+              "localizedDisplayName": {},
+              "name": "Adri",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/af-ZA-Adri-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/af-ZA-Adri-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Arabic",
+          "localVoices": {
+            "languages": [
+              "ar",
+              "arb"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Ameena",
+              "engine": "azure",
+              "gender": "female",
+              "language": "ar-AE",
+              "localizedDisplayName": {},
+              "name": "Fatima",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ar-AE-Fatima-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ar-AE-Fatima-azure.mp3"
+            },
+            {
+              "displayName": "Hassan",
+              "engine": "azure",
+              "gender": "male",
+              "language": "ar-AE",
+              "localizedDisplayName": {},
+              "name": "Hamdan",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ar-AE-Hamdan-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ar-AE-Hamdan-azure.mp3"
+            },
+            {
+              "displayName": "Aisha",
+              "engine": "neural",
+              "gender": "female",
+              "language": "ar-AE",
+              "localizedDisplayName": {},
+              "name": "Hala",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ar-AE-Hala-neural.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ar-AE-Hala-neural.mp3"
+            },
+            {
+              "displayName": "Fatima",
+              "engine": "azure",
+              "gender": "female",
+              "language": "ar-IQ",
+              "localizedDisplayName": {},
+              "name": "Rana",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ar-IQ-Rana-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ar-IQ-Rana-azure.mp3"
+            },
+            {
+              "displayName": "Mostafa",
+              "engine": "azure",
+              "gender": "male",
+              "language": "ar-IQ",
+              "localizedDisplayName": {},
+              "name": "Bassel",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ar-IQ-Bassel-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ar-IQ-Bassel-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Bengali",
+          "localVoices": {
+            "languages": [
+              "bn"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Anik",
+              "engine": "azure",
+              "gender": "male",
+              "language": "bn-IN",
+              "localizedDisplayName": {},
+              "name": "Bashkar",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/bn-IN-Bashkar-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/bn-IN-Bashkar-azure.mp3"
+            },
+            {
+              "displayName": "Ananya",
+              "engine": "azure",
+              "gender": "female",
+              "language": "bn-IN",
+              "localizedDisplayName": {},
+              "name": "Tanishaa",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/bn-IN-Tanishaa-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/bn-IN-Tanishaa-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Bulgarian",
+          "localVoices": {
+            "languages": [
+              "bg"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Sofia",
+              "engine": "azure",
+              "gender": "female",
+              "language": "bg-BG",
+              "localizedDisplayName": {},
+              "name": "Kalina",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/bg-BG-Kalina-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/bg-BG-Kalina-azure.mp3"
+            },
+            {
+              "displayName": "Simeon",
+              "engine": "azure",
+              "gender": "male",
+              "language": "bg-BG",
+              "localizedDisplayName": {},
+              "name": "Borislav",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/bg-BG-Borislav-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/bg-BG-Borislav-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Catalan",
+          "localVoices": {
+            "languages": [
+              "ca"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Estel",
+              "engine": "azure",
+              "gender": "female",
+              "language": "ca-ES",
+              "localizedDisplayName": {},
+              "name": "Joana",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ca-ES-Joana-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ca-ES-Joana-azure.mp3"
+            },
+            {
+              "displayName": "Bruc",
+              "engine": "azure",
+              "gender": "male",
+              "language": "ca-ES",
+              "localizedDisplayName": {},
+              "name": "Enric",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ca-ES-Enric-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ca-ES-Enric-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Chinese",
+          "localVoices": {
+            "languages": [
+              "zh",
+              "cmn",
+              "yue"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Yarui",
+              "engine": "azure",
+              "gender": "female",
+              "language": "zh-CN",
+              "localizedDisplayName": {},
+              "name": "Xiaoxiao",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/zh-CN-Xiaoxiao-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/zh-CN-Xiaoxiao-azure.mp3"
+            },
+            {
+              "displayName": "Junjie",
+              "engine": "azure",
+              "gender": "male",
+              "language": "zh-CN",
+              "localizedDisplayName": {},
+              "name": "Yunfeng",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/zh-CN-Yunfeng-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/zh-CN-Yunfeng-azure.mp3"
+            },
+            {
+              "displayName": "Yarong",
+              "engine": "azure",
+              "gender": "female",
+              "language": "zh-CN",
+              "localizedDisplayName": {},
+              "name": "Xiaomeng",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/zh-CN-Xiaomeng-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/zh-CN-Xiaomeng-azure.mp3"
+            },
+            {
+              "displayName": "Junqiang",
+              "engine": "azure",
+              "gender": "male",
+              "language": "zh-CN",
+              "localizedDisplayName": {},
+              "name": "Yunjian",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/zh-CN-Yunjian-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/zh-CN-Yunjian-azure.mp3"
+            },
+            {
+              "displayName": "Yating",
+              "engine": "azure",
+              "gender": "female",
+              "language": "zh-CN",
+              "localizedDisplayName": {},
+              "name": "Xiaoyan",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/zh-CN-Xiaoyan-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/zh-CN-Xiaoyan-azure.mp3"
+            },
+            {
+              "displayName": "Junwei",
+              "engine": "azure",
+              "gender": "male",
+              "language": "zh-CN",
+              "localizedDisplayName": {},
+              "name": "Yunze",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/zh-CN-Yunze-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/zh-CN-Yunze-azure.mp3"
+            },
+            {
+              "displayName": "Yixiao",
+              "engine": "neural",
+              "gender": "female",
+              "language": "cmn-CN",
+              "localizedDisplayName": {},
+              "name": "Zhiyu",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/cmn-CN-Zhiyu-neural.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/cmn-CN-Zhiyu-neural.mp3"
+            },
+            {
+              "displayName": "Meilin",
+              "engine": "azure",
+              "gender": "female",
+              "language": "zh-HK",
+              "localizedDisplayName": {},
+              "name": "HiuMaan",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/zh-HK-HiuMaan-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/zh-HK-HiuMaan-azure.mp3"
+            },
+            {
+              "displayName": "Liang",
+              "engine": "azure",
+              "gender": "male",
+              "language": "zh-HK",
+              "localizedDisplayName": {},
+              "name": "WanLung",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/zh-HK-WanLung-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/zh-HK-WanLung-azure.mp3"
+            },
+            {
+              "displayName": "Qianzhi",
+              "engine": "neural",
+              "gender": "female",
+              "language": "yue-CN",
+              "localizedDisplayName": {},
+              "name": "Hiujin",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/yue-CN-Hiujin-neural.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/yue-CN-Hiujin-neural.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Croatian",
+          "localVoices": {
+            "languages": [
+              "hr"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Enes",
+              "engine": "azure",
+              "gender": "male",
+              "language": "hr-HR",
+              "localizedDisplayName": {},
+              "name": "Srecko",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/hr-HR-Srecko-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/hr-HR-Srecko-azure.mp3"
+            },
+            {
+              "displayName": "Petra",
+              "engine": "azure",
+              "gender": "female",
+              "language": "hr-HR",
+              "localizedDisplayName": {},
+              "name": "Gabrijela",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/hr-HR-Gabrijela-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/hr-HR-Gabrijela-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Czech",
+          "localVoices": {
+            "languages": [
+              "cs"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Ambrož",
+              "engine": "azure",
+              "gender": "male",
+              "language": "cs-CZ",
+              "localizedDisplayName": {},
+              "name": "Antonin",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/cs-CZ-Antonin-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/cs-CZ-Antonin-azure.mp3"
+            },
+            {
+              "displayName": "Berta",
+              "engine": "azure",
+              "gender": "female",
+              "language": "cs-CZ",
+              "localizedDisplayName": {},
+              "name": "Vlasta",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/cs-CZ-Vlasta-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/cs-CZ-Vlasta-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Danish",
+          "localVoices": {
+            "languages": [
+              "da"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Alma",
+              "engine": "azure",
+              "gender": "female",
+              "language": "da-DK",
+              "localizedDisplayName": {},
+              "name": "Christel",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/da-DK-Christel-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/da-DK-Christel-azure.mp3"
+            },
+            {
+              "displayName": "Alfred",
+              "engine": "azure",
+              "gender": "male",
+              "language": "da-DK",
+              "localizedDisplayName": {},
+              "name": "Jeppe",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/da-DK-Jeppe-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/da-DK-Jeppe-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Dutch",
+          "localVoices": {
+            "languages": [
+              "nl"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Tess",
+              "engine": "azure",
+              "gender": "female",
+              "language": "nl-NL",
+              "localizedDisplayName": {},
+              "name": "Colette",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/nl-NL-Colette-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/nl-NL-Colette-azure.mp3"
+            },
+            {
+              "displayName": "Finn",
+              "engine": "azure",
+              "gender": "male",
+              "language": "nl-NL",
+              "localizedDisplayName": {},
+              "name": "Maarten",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/nl-NL-Maarten-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/nl-NL-Maarten-azure.mp3"
+            },
+            {
+              "displayName": "Evi",
+              "engine": "neural",
+              "gender": "female",
+              "language": "nl-NL",
+              "localizedDisplayName": {},
+              "name": "Laura",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/nl-NL-Laura-neural.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/nl-NL-Laura-neural.mp3"
+            },
+            {
+              "displayName": "Jort",
+              "engine": "standard",
+              "gender": "male",
+              "language": "nl-NL",
+              "localizedDisplayName": {},
+              "name": "Ruben",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/nl-NL-Ruben-standard.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/nl-NL-Ruben-standard.mp3"
+            },
+            {
+              "displayName": "Eva",
+              "engine": "azure",
+              "gender": "female",
+              "language": "nl-BE",
+              "localizedDisplayName": {},
+              "name": "Dena",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/nl-BE-Dena-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/nl-BE-Dena-azure.mp3"
+            },
+            {
+              "displayName": "Noah",
+              "engine": "azure",
+              "gender": "male",
+              "language": "nl-BE",
+              "localizedDisplayName": {},
+              "name": "Arnaud",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/nl-BE-Arnaud-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/nl-BE-Arnaud-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Estonian",
+          "localVoices": {
+            "languages": [
+              "et"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Kristi",
+              "engine": "azure",
+              "gender": "female",
+              "language": "et-EE",
+              "localizedDisplayName": {},
+              "name": "Anu",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/et-EE-Anu-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/et-EE-Anu-azure.mp3"
+            },
+            {
+              "displayName": "Toomas",
+              "engine": "azure",
+              "gender": "male",
+              "language": "et-EE",
+              "localizedDisplayName": {},
+              "name": "Kert",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/et-EE-Kert-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/et-EE-Kert-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Filipino",
+          "localVoices": {
+            "languages": [
+              "tl",
+              "fil"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Aina",
+              "engine": "azure",
+              "gender": "female",
+              "language": "fil-PH",
+              "localizedDisplayName": {},
+              "name": "Blessica",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/fil-PH-Blessica-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/fil-PH-Blessica-azure.mp3"
+            },
+            {
+              "displayName": "Andres",
+              "engine": "azure",
+              "gender": "male",
+              "language": "fil-PH",
+              "localizedDisplayName": {},
+              "name": "Angelo",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/fil-PH-Angelo-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/fil-PH-Angelo-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Finnish",
+          "localVoices": {
+            "languages": [
+              "fi",
+              "fin"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Heikki",
+              "engine": "azure",
+              "gender": "male",
+              "language": "fi-FI",
+              "localizedDisplayName": {},
+              "name": "Harri",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/fi-FI-Harri-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/fi-FI-Harri-azure.mp3"
+            },
+            {
+              "displayName": "Ella",
+              "engine": "azure",
+              "gender": "female",
+              "language": "fi-FI",
+              "localizedDisplayName": {},
+              "name": "Selma",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/fi-FI-Selma-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/fi-FI-Selma-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "French",
+          "localVoices": {
+            "languages": [
+              "fr"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Louise",
+              "engine": "azure",
+              "gender": "female",
+              "language": "fr-FR",
+              "localizedDisplayName": {},
+              "name": "Denise",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/fr-FR-Denise-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/fr-FR-Denise-azure.mp3"
+            },
+            {
+              "displayName": "Claude",
+              "engine": "azure",
+              "gender": "male",
+              "language": "fr-FR",
+              "localizedDisplayName": {},
+              "name": "Henri",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/fr-FR-Henri-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/fr-FR-Henri-azure.mp3"
+            },
+            {
+              "displayName": "Anais",
+              "engine": "azure",
+              "gender": "female",
+              "language": "fr-FR",
+              "localizedDisplayName": {},
+              "name": "Celeste",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/fr-FR-Celeste-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/fr-FR-Celeste-azure.mp3"
+            },
+            {
+              "displayName": "Louis",
+              "engine": "azure",
+              "gender": "male",
+              "language": "fr-FR",
+              "localizedDisplayName": {},
+              "name": "Claude",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/fr-FR-Claude-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/fr-FR-Claude-azure.mp3"
+            },
+            {
+              "displayName": "Lina",
+              "engine": "azure",
+              "gender": "female",
+              "language": "fr-CA",
+              "localizedDisplayName": {},
+              "name": "Sylvie",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/fr-CA-Sylvie-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/fr-CA-Sylvie-azure.mp3"
+            },
+            {
+              "displayName": "Liam",
+              "engine": "azure",
+              "gender": "male",
+              "language": "fr-CA",
+              "localizedDisplayName": {},
+              "name": "Jean",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/fr-CA-Jean-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/fr-CA-Jean-azure.mp3"
+            },
+            {
+              "displayName": "Mila",
+              "engine": "azure",
+              "gender": "female",
+              "language": "fr-BE",
+              "localizedDisplayName": {},
+              "name": "Charline",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/fr-BE-Charline-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/fr-BE-Charline-azure.mp3"
+            },
+            {
+              "displayName": "Jules",
+              "engine": "azure",
+              "gender": "male",
+              "language": "fr-BE",
+              "localizedDisplayName": {},
+              "name": "Gerard",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/fr-BE-Gerard-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/fr-BE-Gerard-azure.mp3"
+            },
+            {
+              "displayName": "Chantal",
+              "engine": "azure",
+              "gender": "female",
+              "language": "fr-CH",
+              "localizedDisplayName": {},
+              "name": "Ariane",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/fr-CH-Ariane-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/fr-CH-Ariane-azure.mp3"
+            },
+            {
+              "displayName": "Francisque",
+              "engine": "azure",
+              "gender": "male",
+              "language": "fr-CH",
+              "localizedDisplayName": {},
+              "name": "Fabrice",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/fr-CH-Fabrice-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/fr-CH-Fabrice-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "German",
+          "localVoices": {
+            "languages": [
+              "de"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Heidi",
+              "engine": "azure",
+              "gender": "female",
+              "language": "de-DE",
+              "localizedDisplayName": {},
+              "name": "Katja",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/de-DE-Katja-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/de-DE-Katja-azure.mp3"
+            },
+            {
+              "displayName": "Emil",
+              "engine": "azure",
+              "gender": "male",
+              "language": "de-DE",
+              "localizedDisplayName": {},
+              "name": "Christoph",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/de-DE-Christoph-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/de-DE-Christoph-azure.mp3"
+            },
+            {
+              "displayName": "Frieda",
+              "engine": "azure",
+              "gender": "female",
+              "language": "de-DE",
+              "localizedDisplayName": {},
+              "name": "Louisa",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/de-DE-Louisa-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/de-DE-Louisa-azure.mp3"
+            },
+            {
+              "displayName": "Bruno",
+              "engine": "azure",
+              "gender": "male",
+              "language": "de-DE",
+              "localizedDisplayName": {},
+              "name": "Conrad",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/de-DE-Conrad-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/de-DE-Conrad-azure.mp3"
+            },
+            {
+              "displayName": "Lara",
+              "engine": "neural",
+              "gender": "female",
+              "language": "de-DE",
+              "localizedDisplayName": {},
+              "name": "Vicki",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/de-DE-Vicki-neural.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/de-DE-Vicki-neural.mp3"
+            },
+            {
+              "displayName": "Felix",
+              "engine": "neural",
+              "gender": "male",
+              "language": "de-DE",
+              "localizedDisplayName": {},
+              "name": "Daniel",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/de-DE-Daniel-neural.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/de-DE-Daniel-neural.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Georgian",
+          "localVoices": {
+            "languages": [
+              "ka"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Levan",
+              "engine": "azure",
+              "gender": "male",
+              "language": "ka-GE",
+              "localizedDisplayName": {},
+              "name": "Giorgi",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ka-GE-Giorgi-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ka-GE-Giorgi-azure.mp3"
+            },
+            {
+              "displayName": "Nino",
+              "engine": "azure",
+              "gender": "female",
+              "language": "ka-GE",
+              "localizedDisplayName": {},
+              "name": "Eka",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ka-GE-Eka-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ka-GE-Eka-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Greek",
+          "localVoices": {
+            "languages": [
+              "el"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Elena",
+              "engine": "azure",
+              "gender": "female",
+              "language": "el-GR",
+              "localizedDisplayName": {},
+              "name": "Athina",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/el-GR-Athina-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/el-GR-Athina-azure.mp3"
+            },
+            {
+              "displayName": "Theodore",
+              "engine": "azure",
+              "gender": "male",
+              "language": "el-GR",
+              "localizedDisplayName": {},
+              "name": "Nestoras",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/el-GR-Nestoras-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/el-GR-Nestoras-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Hebrew",
+          "localVoices": {
+            "languages": [
+              "he",
+              "iw"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Hadar",
+              "engine": "azure",
+              "gender": "male",
+              "language": "he-IL",
+              "localizedDisplayName": {},
+              "name": "Avri",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/he-IL-Avri-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/he-IL-Avri-azure.mp3"
+            },
+            {
+              "displayName": "Hannah",
+              "engine": "azure",
+              "gender": "female",
+              "language": "he-IL",
+              "localizedDisplayName": {},
+              "name": "Hila",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/he-IL-Hila-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/he-IL-Hila-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Hindi",
+          "localVoices": {
+            "languages": [
+              "hi"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Rajiv",
+              "engine": "azure",
+              "gender": "male",
+              "language": "hi-IN",
+              "localizedDisplayName": {},
+              "name": "Madhur",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/hi-IN-Madhur-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/hi-IN-Madhur-azure.mp3"
+            },
+            {
+              "displayName": "Vinti",
+              "engine": "azure",
+              "gender": "female",
+              "language": "hi-IN",
+              "localizedDisplayName": {},
+              "name": "Swara",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/hi-IN-Swara-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/hi-IN-Swara-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Hungarian",
+          "localVoices": {
+            "languages": [
+              "hu",
+              "hun"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Lili",
+              "engine": "azure",
+              "gender": "female",
+              "language": "hu-HU",
+              "localizedDisplayName": {},
+              "name": "Noemi",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/hu-HU-Noemi-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/hu-HU-Noemi-azure.mp3"
+            },
+            {
+              "displayName": "Zoltán",
+              "engine": "azure",
+              "gender": "male",
+              "language": "hu-HU",
+              "localizedDisplayName": {},
+              "name": "Tamas",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/hu-HU-Tamas-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/hu-HU-Tamas-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Icelandic",
+          "localVoices": {
+            "languages": [
+              "is"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Johanna",
+              "engine": "azure",
+              "gender": "female",
+              "language": "is-IS",
+              "localizedDisplayName": {},
+              "name": "Gudrun",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/is-IS-Gudrun-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/is-IS-Gudrun-azure.mp3"
+            },
+            {
+              "displayName": "Fridrik",
+              "engine": "azure",
+              "gender": "male",
+              "language": "is-IS",
+              "localizedDisplayName": {},
+              "name": "Gunnar",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/is-IS-Gunnar-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/is-IS-Gunnar-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Indonesian",
+          "localVoices": {
+            "languages": [
+              "id",
+              "in"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Eka",
+              "engine": "azure",
+              "gender": "female",
+              "language": "id-ID",
+              "localizedDisplayName": {},
+              "name": "Gadis",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/id-ID-Gadis-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/id-ID-Gadis-azure.mp3"
+            },
+            {
+              "displayName": "Darma",
+              "engine": "azure",
+              "gender": "male",
+              "language": "id-ID",
+              "localizedDisplayName": {},
+              "name": "Ardi",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/id-ID-Ardi-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/id-ID-Ardi-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Italian",
+          "localVoices": {
+            "languages": [
+              "it"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Aurora",
+              "engine": "azure",
+              "gender": "female",
+              "language": "it-IT",
+              "localizedDisplayName": {},
+              "name": "Irma",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/it-IT-Irma-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/it-IT-Irma-azure.mp3"
+            },
+            {
+              "displayName": "Leonardo",
+              "engine": "azure",
+              "gender": "male",
+              "language": "it-IT",
+              "localizedDisplayName": {},
+              "name": "Benigno",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/it-IT-Benigno-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/it-IT-Benigno-azure.mp3"
+            },
+            {
+              "displayName": "Giulia",
+              "engine": "azure",
+              "gender": "female",
+              "language": "it-IT",
+              "localizedDisplayName": {},
+              "name": "Elsa",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/it-IT-Elsa-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/it-IT-Elsa-azure.mp3"
+            },
+            {
+              "displayName": "Tommaso",
+              "engine": "azure",
+              "gender": "male",
+              "language": "it-IT",
+              "localizedDisplayName": {},
+              "name": "Gianni",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/it-IT-Gianni-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/it-IT-Gianni-azure.mp3"
+            },
+            {
+              "displayName": "Giorgia",
+              "engine": "azure",
+              "gender": "female",
+              "language": "it-IT",
+              "localizedDisplayName": {},
+              "name": "Palmira",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/it-IT-Palmira-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/it-IT-Palmira-azure.mp3"
+            },
+            {
+              "displayName": "Mattia",
+              "engine": "azure",
+              "gender": "male",
+              "language": "it-IT",
+              "localizedDisplayName": {},
+              "name": "Diego",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/it-IT-Diego-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/it-IT-Diego-azure.mp3"
+            },
+            {
+              "displayName": "Matilde",
+              "engine": "azure",
+              "gender": "female",
+              "language": "it-IT",
+              "localizedDisplayName": {},
+              "name": "Imelda",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/it-IT-Imelda-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/it-IT-Imelda-azure.mp3"
+            },
+            {
+              "displayName": "Giuseppe",
+              "engine": "azure",
+              "gender": "male",
+              "language": "it-IT",
+              "localizedDisplayName": {},
+              "name": "Cataldo",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/it-IT-Cataldo-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/it-IT-Cataldo-azure.mp3"
+            },
+            {
+              "displayName": "Beatrice",
+              "engine": "neural",
+              "gender": "female",
+              "language": "it-IT",
+              "localizedDisplayName": {},
+              "name": "Bianca",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/it-IT-Bianca-neural.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/it-IT-Bianca-neural.mp3"
+            },
+            {
+              "displayName": "Alessandro",
+              "engine": "neural",
+              "gender": "male",
+              "language": "it-IT",
+              "localizedDisplayName": {},
+              "name": "Adriano",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/it-IT-Adriano-neural.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/it-IT-Adriano-neural.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Japanese",
+          "localVoices": {
+            "languages": [
+              "ja"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Airi",
+              "engine": "azure",
+              "gender": "female",
+              "language": "ja-JP",
+              "localizedDisplayName": {},
+              "name": "Mayu",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ja-JP-Mayu-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ja-JP-Mayu-azure.mp3"
+            },
+            {
+              "displayName": "Shota",
+              "engine": "azure",
+              "gender": "male",
+              "language": "ja-JP",
+              "localizedDisplayName": {},
+              "name": "Naoki",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ja-JP-Naoki-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ja-JP-Naoki-azure.mp3"
+            },
+            {
+              "displayName": "Sakura",
+              "engine": "azure",
+              "gender": "female",
+              "language": "ja-JP",
+              "localizedDisplayName": {},
+              "name": "Nanami",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ja-JP-Nanami-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ja-JP-Nanami-azure.mp3"
+            },
+            {
+              "displayName": "Kenzo",
+              "engine": "azure",
+              "gender": "male",
+              "language": "ja-JP",
+              "localizedDisplayName": {},
+              "name": "Daichi",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ja-JP-Daichi-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ja-JP-Daichi-azure.mp3"
+            },
+            {
+              "displayName": "Yoshiko",
+              "engine": "azure",
+              "gender": "female",
+              "language": "ja-JP",
+              "localizedDisplayName": {},
+              "name": "Shiori",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ja-JP-Shiori-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ja-JP-Shiori-azure.mp3"
+            },
+            {
+              "displayName": "Hayato",
+              "engine": "azure",
+              "gender": "male",
+              "language": "ja-JP",
+              "localizedDisplayName": {},
+              "name": "Keita",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ja-JP-Keita-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ja-JP-Keita-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Kazakh",
+          "localVoices": {
+            "languages": [
+              "kk"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Aibek",
+              "engine": "azure",
+              "gender": "male",
+              "language": "kk-KZ",
+              "localizedDisplayName": {},
+              "name": "Daulet",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/kk-KZ-Daulet-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/kk-KZ-Daulet-azure.mp3"
+            },
+            {
+              "displayName": "Gulnara",
+              "engine": "azure",
+              "gender": "female",
+              "language": "kk-KZ",
+              "localizedDisplayName": {},
+              "name": "Aigul",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/kk-KZ-Aigul-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/kk-KZ-Aigul-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Korean",
+          "localVoices": {
+            "languages": [
+              "ko"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Min-seo",
+              "engine": "azure",
+              "gender": "female",
+              "language": "ko-KR",
+              "localizedDisplayName": {},
+              "name": "Sunhi",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ko-KR-Sunhi-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ko-KR-Sunhi-azure.mp3"
+            },
+            {
+              "displayName": "Min-jun",
+              "engine": "azure",
+              "gender": "male",
+              "language": "ko-KR",
+              "localizedDisplayName": {},
+              "name": "InJoon",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ko-KR-InJoon-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ko-KR-InJoon-azure.mp3"
+            },
+            {
+              "displayName": "Seo-yun",
+              "engine": "azure",
+              "gender": "female",
+              "language": "ko-KR",
+              "localizedDisplayName": {},
+              "name": "JiMin",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ko-KR-JiMin-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ko-KR-JiMin-azure.mp3"
+            },
+            {
+              "displayName": "Ji-min",
+              "engine": "azure",
+              "gender": "female",
+              "language": "ko-KR",
+              "localizedDisplayName": {},
+              "name": "BongJin",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ko-KR-BongJin-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ko-KR-BongJin-azure.mp3"
+            },
+            {
+              "displayName": "Eun-jung",
+              "engine": "neural",
+              "gender": "female",
+              "language": "ko-KR",
+              "localizedDisplayName": {},
+              "name": "Seoyeon",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ko-KR-Seoyeon-neural.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ko-KR-Seoyeon-neural.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Lithuanian",
+          "localVoices": {
+            "languages": [
+              "lt"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Edita",
+              "engine": "azure",
+              "gender": "female",
+              "language": "lt-LT",
+              "localizedDisplayName": {},
+              "name": "Ona",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/lt-LT-Ona-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/lt-LT-Ona-azure.mp3"
+            },
+            {
+              "displayName": "Mindaugas",
+              "engine": "azure",
+              "gender": "male",
+              "language": "lt-LT",
+              "localizedDisplayName": {},
+              "name": "Leonas",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/lt-LT-Leonas-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/lt-LT-Leonas-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Latvian",
+          "localVoices": {
+            "languages": [
+              "lv"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Laura",
+              "engine": "azure",
+              "gender": "female",
+              "language": "lv-LV",
+              "localizedDisplayName": {},
+              "name": "Everita",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/lv-LV-Everita-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/lv-LV-Everita-azure.mp3"
+            },
+            {
+              "displayName": "Marks",
+              "engine": "azure",
+              "gender": "male",
+              "language": "lv-LV",
+              "localizedDisplayName": {},
+              "name": "Nils",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/lv-LV-Nils-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/lv-LV-Nils-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Malay",
+          "localVoices": {
+            "languages": [
+              "ms"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Khalis",
+              "engine": "azure",
+              "gender": "male",
+              "language": "ms-MY",
+              "localizedDisplayName": {},
+              "name": "Osman",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ms-MY-Osman-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ms-MY-Osman-azure.mp3"
+            },
+            {
+              "displayName": "Siti",
+              "engine": "azure",
+              "gender": "female",
+              "language": "ms-MY",
+              "localizedDisplayName": {},
+              "name": "Yasmin",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ms-MY-Yasmin-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ms-MY-Yasmin-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Nepali",
+          "localVoices": {
+            "languages": [
+              "ne"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Thinam",
+              "engine": "azure",
+              "gender": "male",
+              "language": "ne-NP",
+              "localizedDisplayName": {},
+              "name": "Sagar",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ne-NP-Sagar-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ne-NP-Sagar-azure.mp3"
+            },
+            {
+              "displayName": "Barsha",
+              "engine": "azure",
+              "gender": "female",
+              "language": "ne-NP",
+              "localizedDisplayName": {},
+              "name": "Hemkala",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ne-NP-Hemkala-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ne-NP-Hemkala-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Norwegian Bokmål",
+          "localVoices": {
+            "languages": [
+              "nb"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Jael",
+              "engine": "azure",
+              "gender": "female",
+              "language": "nb-NO",
+              "localizedDisplayName": {},
+              "name": "Iselin",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/nb-NO-Iselin-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/nb-NO-Iselin-azure.mp3"
+            },
+            {
+              "displayName": "Oskar",
+              "engine": "azure",
+              "gender": "male",
+              "language": "nb-NO",
+              "localizedDisplayName": {},
+              "name": "Finn",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/nb-NO-Finn-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/nb-NO-Finn-azure.mp3"
+            },
+            {
+              "displayName": "Caterina",
+              "engine": "azure",
+              "gender": "female",
+              "language": "nb-NO",
+              "localizedDisplayName": {},
+              "name": "Pernille",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/nb-NO-Pernille-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/nb-NO-Pernille-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Persian",
+          "localVoices": {
+            "languages": [
+              "fa"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Neema",
+              "engine": "azure",
+              "gender": "male",
+              "language": "fa-IR",
+              "localizedDisplayName": {},
+              "name": "Farid",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/fa-IR-Farid-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/fa-IR-Farid-azure.mp3"
+            },
+            {
+              "displayName": "Fariba",
+              "engine": "azure",
+              "gender": "female",
+              "language": "fa-IR",
+              "localizedDisplayName": {},
+              "name": "Dilara",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/fa-IR-Dilara-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/fa-IR-Dilara-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Polish",
+          "localVoices": {
+            "languages": [
+              "pl"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Zofia",
+              "engine": "azure",
+              "gender": "female",
+              "language": "pl-PL",
+              "localizedDisplayName": {},
+              "name": "Agnieszka",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/pl-PL-Agnieszka-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/pl-PL-Agnieszka-azure.mp3"
+            },
+            {
+              "displayName": "Jakub",
+              "engine": "azure",
+              "gender": "male",
+              "language": "pl-PL",
+              "localizedDisplayName": {},
+              "name": "Marek",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/pl-PL-Marek-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/pl-PL-Marek-azure.mp3"
+            },
+            {
+              "displayName": "Alicja",
+              "engine": "azure",
+              "gender": "female",
+              "language": "pl-PL",
+              "localizedDisplayName": {},
+              "name": "Zofia",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/pl-PL-Zofia-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/pl-PL-Zofia-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Portuguese",
+          "localVoices": {
+            "languages": [
+              "pt"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Cecilia",
+              "engine": "azure",
+              "gender": "female",
+              "language": "pt-BR",
+              "localizedDisplayName": {},
+              "name": "Brenda",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/pt-BR-Brenda-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/pt-BR-Brenda-azure.mp3"
+            },
+            {
+              "displayName": "Theo",
+              "engine": "azure",
+              "gender": "male",
+              "language": "pt-BR",
+              "localizedDisplayName": {},
+              "name": "Donato",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/pt-BR-Donato-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/pt-BR-Donato-azure.mp3"
+            },
+            {
+              "displayName": "Valentina",
+              "engine": "azure",
+              "gender": "female",
+              "language": "pt-BR",
+              "localizedDisplayName": {},
+              "name": "Yara",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/pt-BR-Yara-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/pt-BR-Yara-azure.mp3"
+            },
+            {
+              "displayName": "Ravi",
+              "engine": "azure",
+              "gender": "male",
+              "language": "pt-BR",
+              "localizedDisplayName": {},
+              "name": "Fabio",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/pt-BR-Fabio-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/pt-BR-Fabio-azure.mp3"
+            },
+            {
+              "displayName": "Lorena",
+              "engine": "azure",
+              "gender": "female",
+              "language": "pt-BR",
+              "localizedDisplayName": {},
+              "name": "Leila",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/pt-BR-Leila-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/pt-BR-Leila-azure.mp3"
+            },
+            {
+              "displayName": "Benicio",
+              "engine": "azure",
+              "gender": "male",
+              "language": "pt-BR",
+              "localizedDisplayName": {},
+              "name": "Julio",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/pt-BR-Julio-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/pt-BR-Julio-azure.mp3"
+            },
+            {
+              "displayName": "Lia",
+              "engine": "neural",
+              "gender": "female",
+              "language": "pt-BR",
+              "localizedDisplayName": {},
+              "name": "Camila",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/pt-BR-Camila-neural.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/pt-BR-Camila-neural.mp3"
+            },
+            {
+              "displayName": "Gabriel",
+              "engine": "neural",
+              "gender": "male",
+              "language": "pt-BR",
+              "localizedDisplayName": {},
+              "name": "Thiago",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/pt-BR-Thiago-neural.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/pt-BR-Thiago-neural.mp3"
+            },
+            {
+              "displayName": "Leonor",
+              "engine": "azure",
+              "gender": "female",
+              "language": "pt-PT",
+              "localizedDisplayName": {},
+              "name": "Fernanda",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/pt-PT-Fernanda-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/pt-PT-Fernanda-azure.mp3"
+            },
+            {
+              "displayName": "Afonso",
+              "engine": "azure",
+              "gender": "male",
+              "language": "pt-PT",
+              "localizedDisplayName": {},
+              "name": "Duarte",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/pt-PT-Duarte-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/pt-PT-Duarte-azure.mp3"
+            },
+            {
+              "displayName": "Amalia",
+              "engine": "neural",
+              "gender": "female",
+              "language": "pt-PT",
+              "localizedDisplayName": {},
+              "name": "Ines",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/pt-PT-Ines-neural.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/pt-PT-Ines-neural.mp3"
+            },
+            {
+              "displayName": "João",
+              "engine": "standard",
+              "gender": "male",
+              "language": "pt-PT",
+              "localizedDisplayName": {},
+              "name": "Cristiano",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/pt-PT-Cristiano-standard.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/pt-PT-Cristiano-standard.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Romanian",
+          "localVoices": {
+            "languages": [
+              "ro"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Adelina",
+              "engine": "azure",
+              "gender": "female",
+              "language": "ro-RO",
+              "localizedDisplayName": {},
+              "name": "Alina",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ro-RO-Alina-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ro-RO-Alina-azure.mp3"
+            },
+            {
+              "displayName": "Daniel",
+              "engine": "azure",
+              "gender": "male",
+              "language": "ro-RO",
+              "localizedDisplayName": {},
+              "name": "Emil",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ro-RO-Emil-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ro-RO-Emil-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Russian",
+          "localVoices": {
+            "languages": [
+              "ru"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Anastasia",
+              "engine": "azure",
+              "gender": "female",
+              "language": "ru-RU",
+              "localizedDisplayName": {},
+              "name": "Dariya",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ru-RU-Dariya-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ru-RU-Dariya-azure.mp3"
+            },
+            {
+              "displayName": "Ivan",
+              "engine": "azure",
+              "gender": "male",
+              "language": "ru-RU",
+              "localizedDisplayName": {},
+              "name": "Dmitry",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ru-RU-Dmitry-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ru-RU-Dmitry-azure.mp3"
+            },
+            {
+              "displayName": "Tatyana",
+              "engine": "standard",
+              "gender": "female",
+              "language": "ru-RU",
+              "localizedDisplayName": {},
+              "name": "Tatyana",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ru-RU-Tatyana-standard.mp3"
+            },
+            {
+              "displayName": "Vasily",
+              "engine": "standard",
+              "gender": "male",
+              "language": "ru-RU",
+              "localizedDisplayName": {},
+              "name": "Maxim",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ru-RU-Dmitry-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Slovak",
+          "localVoices": {
+            "languages": [
+              "sk"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Daniela",
+              "engine": "azure",
+              "gender": "female",
+              "language": "sk-SK",
+              "localizedDisplayName": {},
+              "name": "Viktoria",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/sk-SK-Viktoria-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/sk-SK-Viktoria-azure.mp3"
+            },
+            {
+              "displayName": "Pavel",
+              "engine": "azure",
+              "gender": "male",
+              "language": "sk-SK",
+              "localizedDisplayName": {},
+              "name": "Lukas",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/sk-SK-Lukas-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/sk-SK-Lukas-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Slovenian",
+          "localVoices": {
+            "languages": [
+              "sl"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Kaja",
+              "engine": "azure",
+              "gender": "female",
+              "language": "sl-SI",
+              "localizedDisplayName": {},
+              "name": "Petra",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/sl-SI-Petra-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/sl-SI-Petra-azure.mp3"
+            },
+            {
+              "displayName": "Val",
+              "engine": "azure",
+              "gender": "male",
+              "language": "sl-SI",
+              "localizedDisplayName": {},
+              "name": "Rok",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/sl-SI-Rok-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/sl-SI-Rok-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Sinhala",
+          "localVoices": {
+            "languages": [
+              "si"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Danushka",
+              "engine": "azure",
+              "gender": "male",
+              "language": "si-LK",
+              "localizedDisplayName": {},
+              "name": "Sameera",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/si-LK-Sameera-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/si-LK-Sameera-azure.mp3"
+            },
+            {
+              "displayName": "Hasini",
+              "engine": "azure",
+              "gender": "female",
+              "language": "si-LK",
+              "localizedDisplayName": {},
+              "name": "Thilini",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/si-LK-Thilini-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/si-LK-Thilini-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Spanish",
+          "localVoices": {
+            "languages": [
+              "es"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Enzo",
+              "engine": "azure",
+              "gender": "male",
+              "language": "es-ES",
+              "localizedDisplayName": {},
+              "name": "Saul",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/es-ES-Saul-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/es-ES-Saul-azure.mp3"
+            },
+            {
+              "displayName": "Lucia",
+              "engine": "azure",
+              "gender": "female",
+              "language": "es-ES",
+              "localizedDisplayName": {},
+              "name": "Vera",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/es-ES-Vera-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/es-ES-Vera-azure.mp3"
+            },
+            {
+              "displayName": "Alvaro",
+              "engine": "azure",
+              "gender": "male",
+              "language": "es-ES",
+              "localizedDisplayName": {},
+              "name": "Arnau",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/es-ES-Arnau-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/es-ES-Arnau-azure.mp3"
+            },
+            {
+              "displayName": "Maria",
+              "engine": "azure",
+              "gender": "female",
+              "language": "es-ES",
+              "localizedDisplayName": {},
+              "name": "Triana",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/es-ES-Triana-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/es-ES-Triana-azure.mp3"
+            },
+            {
+              "displayName": "José",
+              "engine": "azure",
+              "gender": "male",
+              "language": "es-MX",
+              "localizedDisplayName": {},
+              "name": "Gerardo",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/es-MX-Gerardo-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/es-MX-Gerardo-azure.mp3"
+            },
+            {
+              "displayName": "Ángel",
+              "engine": "azure",
+              "gender": "female",
+              "language": "es-MX",
+              "localizedDisplayName": {},
+              "name": "Carlota",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/es-MX-Carlota-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/es-MX-Carlota-azure.mp3"
+            },
+            {
+              "displayName": "Javier",
+              "engine": "azure",
+              "gender": "male",
+              "language": "es-MX",
+              "localizedDisplayName": {},
+              "name": "Luciano",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/es-MX-Luciano-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/es-MX-Luciano-azure.mp3"
+            },
+            {
+              "displayName": "Malena",
+              "engine": "azure",
+              "gender": "female",
+              "language": "es-MX",
+              "localizedDisplayName": {},
+              "name": "Larissa",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/es-MX-Larissa-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/es-MX-Larissa-azure.mp3"
+            },
+            {
+              "displayName": "Lupe",
+              "engine": "neural",
+              "gender": "female",
+              "language": "es-US",
+              "localizedDisplayName": {},
+              "name": "Lupe",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/es-US-Lupe-neural.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/es-US-Lupe-neural.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Swedish",
+          "localVoices": {
+            "languages": [
+              "sv"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Astrid",
+              "engine": "azure",
+              "gender": "female",
+              "language": "sv-SE",
+              "localizedDisplayName": {},
+              "name": "Hillevi",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/sv-SE-Hillevi-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/sv-SE-Hillevi-azure.mp3"
+            },
+            {
+              "displayName": "Elias",
+              "engine": "azure",
+              "gender": "male",
+              "language": "sv-SE",
+              "localizedDisplayName": {},
+              "name": "Mattias",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/sv-SE-Mattias-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/sv-SE-Mattias-azure.mp3"
+            },
+            {
+              "displayName": "Maja",
+              "engine": "azure",
+              "gender": "female",
+              "language": "sv-SE",
+              "localizedDisplayName": {},
+              "name": "Sofie",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/sv-SE-Sofie-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/sv-SE-Sofie-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Swahili",
+          "localVoices": {
+            "languages": [
+              "sw"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Dalila",
+              "engine": "azure",
+              "gender": "female",
+              "language": "sw-TZ",
+              "localizedDisplayName": {},
+              "name": "Rehema",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/sw-TZ-Rehema-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/sw-TZ-Rehema-azure.mp3"
+            },
+            {
+              "displayName": "Abedi",
+              "engine": "azure",
+              "gender": "male",
+              "language": "sw-TZ",
+              "localizedDisplayName": {},
+              "name": "Daudi",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/sw-TZ-Daudi-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/sw-TZ-Daudi-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Tamil",
+          "localVoices": {
+            "languages": [
+              "ta"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Radha",
+              "engine": "azure",
+              "gender": "female",
+              "language": "ta-IN",
+              "localizedDisplayName": {},
+              "name": "Pallavi",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ta-IN-Pallavi-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ta-IN-Pallavi-azure.mp3"
+            },
+            {
+              "displayName": "Viyan",
+              "engine": "azure",
+              "gender": "male",
+              "language": "ta-IN",
+              "localizedDisplayName": {},
+              "name": "Valluvar",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ta-IN-Valluvar-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ta-IN-Valluvar-azure.mp3"
+            },
+            {
+              "displayName": "Sharmila",
+              "engine": "azure",
+              "gender": "female",
+              "language": "ta-LK",
+              "localizedDisplayName": {},
+              "name": "Saranya",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ta-LK-Saranya-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ta-LK-Saranya-azure.mp3"
+            },
+            {
+              "displayName": "Neelan",
+              "engine": "azure",
+              "gender": "male",
+              "language": "ta-LK",
+              "localizedDisplayName": {},
+              "name": "Kumar",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ta-LK-Kumar-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ta-LK-Kumar-azure.mp3"
+            },
+            {
+              "displayName": "Nila",
+              "engine": "azure",
+              "gender": "female",
+              "language": "ta-MY",
+              "localizedDisplayName": {},
+              "name": "Kani",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ta-MY-Kani-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ta-MY-Kani-azure.mp3"
+            },
+            {
+              "displayName": "Sanjay",
+              "engine": "azure",
+              "gender": "male",
+              "language": "ta-MY",
+              "localizedDisplayName": {},
+              "name": "Surya",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ta-MY-Surya-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ta-MY-Surya-azure.mp3"
+            },
+            {
+              "displayName": "Aaira",
+              "engine": "azure",
+              "gender": "female",
+              "language": "ta-SG",
+              "localizedDisplayName": {},
+              "name": "Venba",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ta-SG-Venba-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ta-SG-Venba-azure.mp3"
+            },
+            {
+              "displayName": "Ron",
+              "engine": "azure",
+              "gender": "male",
+              "language": "ta-SG",
+              "localizedDisplayName": {},
+              "name": "Anbu",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ta-SG-Anbu-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ta-SG-Anbu-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Telugu",
+          "localVoices": {
+            "languages": [
+              "te"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Krishna",
+              "engine": "azure",
+              "gender": "male",
+              "language": "te-IN",
+              "localizedDisplayName": {},
+              "name": "Mohan",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/te-IN-Mohan-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/te-IN-Mohan-azure.mp3"
+            },
+            {
+              "displayName": "Mani",
+              "engine": "azure",
+              "gender": "female",
+              "language": "te-IN",
+              "localizedDisplayName": {},
+              "name": "Shruti",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/te-IN-Shruti-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/te-IN-Shruti-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Thai",
+          "localVoices": {
+            "languages": [
+              "th"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Praew",
+              "engine": "azure",
+              "gender": "female",
+              "language": "th-TH",
+              "localizedDisplayName": {},
+              "name": "Premwadee",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/th-TH-Premwadee-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/th-TH-Premwadee-azure.mp3"
+            },
+            {
+              "displayName": "Somsak",
+              "engine": "azure",
+              "gender": "male",
+              "language": "th-TH",
+              "localizedDisplayName": {},
+              "name": "Niwat",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/th-TH-Niwat-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/th-TH-Niwat-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Turkish",
+          "localVoices": {
+            "languages": [
+              "tr"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Azra",
+              "engine": "azure",
+              "gender": "female",
+              "language": "tr-TR",
+              "localizedDisplayName": {},
+              "name": "Emel",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/tr-TR-Emel-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/tr-TR-Emel-azure.mp3"
+            },
+            {
+              "displayName": "Kerem",
+              "engine": "azure",
+              "gender": "male",
+              "language": "tr-TR",
+              "localizedDisplayName": {},
+              "name": "Ahmet",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/tr-TR-Ahmet-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/tr-TR-Ahmet-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Urdu",
+          "localVoices": {
+            "languages": [
+              "ur"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Fiza",
+              "engine": "azure",
+              "gender": "female",
+              "language": "ur-IN",
+              "localizedDisplayName": {},
+              "name": "Gul",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ur-IN-Gul-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ur-IN-Gul-azure.mp3"
+            },
+            {
+              "displayName": "Hamza",
+              "engine": "azure",
+              "gender": "male",
+              "language": "ur-IN",
+              "localizedDisplayName": {},
+              "name": "Salman",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ur-IN-Salman-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ur-IN-Salman-azure.mp3"
+            },
+            {
+              "displayName": "Urwa",
+              "engine": "azure",
+              "gender": "female",
+              "language": "ur-PK",
+              "localizedDisplayName": {},
+              "name": "Uzma",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ur-PK-Uzma-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ur-PK-Uzma-azure.mp3"
+            },
+            {
+              "displayName": "Rehan",
+              "engine": "azure",
+              "gender": "male",
+              "language": "ur-PK",
+              "localizedDisplayName": {},
+              "name": "Asad",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ur-PK-Asad-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ur-PK-Asad-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Ukrainian",
+          "localVoices": {
+            "languages": [
+              "uk"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Olena",
+              "engine": "azure",
+              "gender": "female",
+              "language": "uk-UA",
+              "localizedDisplayName": {},
+              "name": "Polina",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/uk-UA-Polina-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/uk-UA-Polina-azure.mp3"
+            },
+            {
+              "displayName": "Dmytro",
+              "engine": "azure",
+              "gender": "male",
+              "language": "uk-UA",
+              "localizedDisplayName": {},
+              "name": "Ostap",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/uk-UA-Ostap-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/uk-UA-Ostap-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Vietnamese",
+          "localVoices": {
+            "languages": [
+              "vi"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Linh",
+              "engine": "azure",
+              "gender": "female",
+              "language": "vi-VN",
+              "localizedDisplayName": {},
+              "name": "HoaiMy",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/vi-VN-HoaiMy-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/vi-VN-HoaiMy-azure.mp3"
+            },
+            {
+              "displayName": "Minh",
+              "engine": "azure",
+              "gender": "male",
+              "language": "vi-VN",
+              "localizedDisplayName": {},
+              "name": "NamMinh",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/vi-VN-NamMinh-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/vi-VN-NamMinh-azure.mp3"
+            }
+          ]
+        },
+        {
+          "displayName": "Irish",
+          "localVoices": {
+            "languages": [
+              "ga"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": [
+            {
+              "displayName": "Fiadh",
+              "engine": "azure",
+              "gender": "female",
+              "language": "ga-IE",
+              "localizedDisplayName": {},
+              "name": "Orla",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ga-IE-Orla-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ga-IE-Orla-azure.mp3"
+            },
+            {
+              "displayName": "Charlie",
+              "engine": "azure",
+              "gender": "male",
+              "language": "ga-IE",
+              "localizedDisplayName": {},
+              "name": "Colm",
+              "avatarImage": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/avatars/ga-IE-Colm-azure.webp",
+              "labels": [],
+              "previewAudio": "https://storage.googleapis.com/speechify-ai-api-prod-centralized-voice-list/base/previews/ga-IE-Colm-azure.mp3"
+            }
+          ]
+        }
+      ],
+      "displayName": "All",
+      "localizedDisplayName": {}
+    },
+    {
+      "categories": [
+        {
+          "displayName": "All",
+          "localVoices": {
+            "languages": [
+              "*"
+            ]
+          },
+          "localizedDisplayName": {},
+          "voices": []
+        }
+      ],
+      "displayName": "Offline",
+      "localizedDisplayName": {}
+    }
+  ],
+  "voicePreviewTemplates": {
+    "*": {
+      "notSpecified": "Hi, my name is {{ name }}. Welcome to Speechify!"
+    },
+    "en": {
+      "notSpecified": "Hi, my name is {{ name }}. I am an English voice."
+    },
+    "en-AU": {
+      "notSpecified": "Hi, my name is {{ name }}. I am an English voice from Australia."
+    },
+    "en-US": {
+      "notSpecified": "Hi, my name is {{ name }}. I am an English voice from the United States."
+    },
+    "en-CA": {
+      "notSpecified": "Hi, my name is {{ name }}. I am an English voice from Canada."
+    },
+    "en-GB": {
+      "notSpecified": "Hi, my name is {{ name }}. I am an English voice from the United Kingdom."
+    },
+    "en-NG": {
+      "notSpecified": "Hi, my name is {{ name }}. I am an English voice from Nigeria."
+    },
+    "en-ZA": {
+      "notSpecified": "Hi, my name is {{ name }}. I am an English voice from South Africa."
+    },
+    "af": {
+      "notSpecified": "Hallo, ek is {{ name }}. Ek is 'n Afrikaanse stem."
+    },
+    "ar": {
+      "notSpecified": "مرحبًا! انا {{ name }}. يساعدني Speechify على القراءة بشكل أسرع."
+    },
+    "arb": {
+      "notSpecified": "مرحبًا! انا {{ name }}. يساعدني Speechify على القراءة بشكل أسرع."
+    },
+    "bn": {
+      "notSpecified": "হ্যালো, আমি {{ name }}। আমি একজন বাংলা ভয়েস।"
+    },
+    "bg": {
+      "notSpecified": "Здравейте! Аз съм {{ name }}. Speechify ми помага да чета по-бързо."
+    },
+    "ca": {
+      "notSpecified": "Hola, em dic {{ name }}. Sóc una veu catalana."
+    },
+    "cs": {
+      "notSpecified": "Ahoj, jmenuji se {{ name }}. Jsem český hlas."
+    },
+    "cmn-CN": {
+      "notSpecified": "你好！我是{{ name }}。 Speechify 可以帮助我更快地阅读。"
+    },
+    "cmn-TW": {
+      "notSpecified": "你好！我是{{ name }}。 Speechify 可以幫助我更快地閱讀。"
+    },
+    "zh-HK": {
+      "notSpecified": "你好！ 我是{{ name }}。 我是來自香港的聲音。"
+    },
+    "yue-CN": {
+      "notSpecified": "你好！ 我是{{ name }}。 我是來自香港的聲音。"
+    },
+    "da": {
+      "notSpecified": "Hej, jeg hedder {{ name }}. Jeg er en dansk stemme."
+    },
+    "de": {
+      "notSpecified": "Hallo, mein Name ist {{ name }}. Ich bin eine deutsche Stimme."
+    },
+    "el": {
+      "notSpecified": "Γεια σας, το όνομά μου είναι {{ name }}. Είμαι ελληνική φωνή."
+    },
+    "et": {
+      "notSpecified": "Tere, minu nimi on {{ name }}. Olen hääl Eestist."
+    },
+    "es": {
+      "notSpecified": "Hola, Soy {{ name }}! Soy una voz española.",
+      "female": "Hola, Soy {{ name }}! Soy una voz española.",
+      "male": "Hola, Soy {{ name }}! Soy una voz española."
+    },
+    "fa-IR": {
+      "notSpecified": "سلام! من {{ name }} هستم. Speechify به من کمک می کند سریعتر بخوانم."
+    },
+    "fil": {
+      "notSpecified": "Kamusta! Ako si {{ name }}. Tinutulungan ako ng Speechify na magbasa nang mas mabilis."
+    },
+    "fi-FI": {
+      "notSpecified": "Hei, olen {{ name }}. Olen suomalainen ääni."
+    },
+    "fr": {
+      "notSpecified": "Bonjour, je m'appelle {{ name }} ! Je suis une voix française.",
+      "female": "Bonjour, je m'appelle {{ name }} ! Je suis une voix française.",
+      "male": "Bonjour, je m'appelle {{ name }} ! Je suis une voix française."
+    },
+    "he-IL": {
+      "notSpecified": "שלום! אני {{ name }} . Speechify עוזר לי לקרוא מהר יותר."
+    },
+    "hi": {
+      "notSpecified": "नमस्ते, मेरा नाम {{ name }} है। Speechify मुझे तेजी से पढ़ने में मदद करता है।"
+    },
+    "hr-HR": {
+      "notSpecified": "Zdravo! Ja sam {{ name }}, Speechify mi pomaže da čitam brže."
+    },
+    "hu-HU": {
+      "notSpecified": "Helló! {{ name }} vagyok. Magyar hang vagyok."
+    },
+    "id-ID": {
+      "notSpecified": "Halo! saya {{ name }}. Speechify membantu Saya membaca lebih cepat."
+    },
+    "is-IS": {
+      "notSpecified": "Halló! Ég er {{ name }}. Speechify hjálpar mér að lesa hraðar."
+    },
+    "it": {
+      "notSpecified": "Ciao, mi chiamo {{ name }}. Sono un voce italiana.",
+      "female": "Ciao, mi chiama {{ name }}. Sono una voce italiana.",
+      "male": "Ciao, mi chiamo {{ name }}. Sono un voce italiana."
+    },
+    "ja-JP": {
+      "notSpecified": "こんにちは！{{ name }}です。 Speechify は、様々な読み物をさらさらと読みこなしてくれます。"
+    },
+    "ka": {
+      "notSpecified": "გამარჯობა, მე ვარ {{ name }}. მე ვარ ქართული ხმა."
+    },
+    "kk": {
+      "notSpecified": "Сәлеметсіз бе, мен {{ name }}. Мен қазақ дыбысым."
+    },
+    "ko-KR": {
+      "notSpecified": "안녕하세요! 저는 {{ name }} 이라고 해요. Speechify는 내가 더욱 빠르게 읽을 수 있도록 도와주죠."
+    },
+    "lt": {
+      "notSpecified": "Sveiki, aš esu {{ name }} iš Lietuvos."
+    },
+    "lv": {
+      "notSpecified": "Sveiki, mani sauc {{ name }} es esmu no Latvijas."
+    },
+    "ms-MY": {
+      "notSpecified": "Helo! Saya {{ name }}. Speechify membantu Saya membaca lebih cepat."
+    },
+    "nb": {
+      "notSpecified": "Hei, jeg heter {{ name }}. Jeg er en norsk stemme."
+    },
+    "ne": {
+      "notSpecified": "नमस्कार, म छ {{ name }}। म नेपाली आवाज हूँ।."
+    },
+    "nl": {
+      "notSpecified": "Hallo, mijn naam is {{ name }}. Ik ben een Nederlandse stem."
+    },
+    "pl": {
+      "notSpecified": "Cześć, nazywam się {{ name }}. Jestem polskim głosem."
+    },
+    "pt": {
+      "notSpecified": "Olá, meu nome é {{ name }}. Eu sou uma voz portuguesa.",
+      "female": "Olá, meu nome é {{ name }}. Eu sou uma voz portuguesa.",
+      "male": "Olá, meu nome é {{ name }}. Eu sou um voz portuguesa."
+    },
+    "ro": {
+      "notSpecified": "Bună, eu sunt {{ name }}. Sunt o voce romaneasca."
+    },
+    "ru": {
+      "notSpecified": "Привет, меня зовут {{ name }}. Я голос из России."
+    },
+    "sk": {
+      "notSpecified": "Ahoj, volám sa {{ name }}. Som slovenský hlas."
+    },
+    "si": {
+      "notSpecified": "හෙලෝ, මම {{ name }} වෙනුවෙන් මම සිංහල හඬකෙළේය."
+    },
+    "sl": {
+      "notSpecified": "Pozdravljeni, moje ime je {{ name }}. Sem slovenski glas."
+    },
+    "sv": {
+      "notSpecified": "Hej, jag heter {{ name }}. Jag är en svensk röst."
+    },
+    "sw": {
+      "notSpecified": "Habari! Jina langu ni {{ name }}. Speechify inanisaidia kusoma haraka zaidi."
+    },
+    "ta-IN": {
+      "notSpecified": "வணக்கம், நான் {{ name }}. நான் இந்தியாவில் இருந்து ஒரு தமிழ் குரல்."
+    },
+    "ta-LK": {
+      "notSpecified": "வணக்கம், நான் {{ name }}. நான் இலங்கையிலிருந்து ஒரு தமிழ் குரல்."
+    },
+    "ta-MY": {
+      "notSpecified": "வணக்கம், நான் {{ name }}. நான் மலேசியாவைச் சேர்ந்த தமிழ்க் குரல்."
+    },
+    "ta-SG": {
+      "notSpecified": "வணக்கம், நான் {{ name }}. நான் சிங்கப்பூரில் இருந்து வந்த தமிழ் குரல்."
+    },
+    "te": {
+      "notSpecified": "హాయ్ నా పేరు {{ name }}, నేను తెలుగు మాట్లాడతాను.",
+      "female": "హాయ్ నా పేరు {{ name }}, నేను తెలుగు మాట్లాడతాను.",
+      "male": "హాయ్ నా పేరు {{ name }}, నేను తెలుగు మాట్లాడతాను."
+    },
+    "th": {
+      "notSpecified": "สวัสดี ฉันชื่อ {{ name }}. ฉันเป็นเสียงภาษาไทย"
+    },
+    "tr": {
+      "notSpecified": "Merhaba benim adım {{ name }}. Ben bir türk sesiyim."
+    },
+    "uk": {
+      "notSpecified": "Привіт, мене звати {{ name }}. Я голос з України."
+    },
+    "ur-IN": {
+      "notSpecified": "ہیلو، میرا نام {{ name }} ہے۔ میں ہندوستان سے ایک اردو آواز ہوں۔"
+    },
+    "ur-PK": {
+      "notSpecified": "ہیلو، میرا نام {{ name }} ہے۔ میں پاکستان کی ایک اردو آواز ہوں۔"
+    },
+    "vi": {
+      "notSpecified": "Xin chào, tên tôi là {{ name }}. Và giọng nói của tôi đến từ việt nam."
+    },
+    "zh": {
+      "notSpecified": "你好，我的名字是 {{ name }}。我是中文的声音"
+    },
+    "ga-IE": {
+      "notSpecified": "Dia dhuit, is é m'ainm {{ name }}. Fáilte go Speechify!"
+    }
+  }
+}

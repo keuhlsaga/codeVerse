@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const sourceTo = document.getElementById('source-to')
     const targetFrom = document.getElementById('target-from')
     const targetTo = document.getElementById('target-to')
-    const customSelect = document.querySelectorAll('.select')
     const fromSelect = document.getElementById('from-select')
     const toSelect = document.getElementById('to-select')
     const searchDropdown = document.getElementById('search-dropdown')
@@ -15,13 +14,36 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const toText = document.getElementById('translated-text')
     const characterCount = document.getElementById('character-count')
     const translateBtn = document.getElementById('translate-btn')
-    const switchLanguage = document.getElementById('switch-language')
+    const switchLanguageBtn = document.getElementById('switch-language')
     const loader = document.getElementById('loader')
+    const fromListenBtn = document.getElementById('from-listen')
+    const toListenBtn = document.getElementById('to-listen')
+    const copyBtn = document.getElementById('copy')
     let dropdownActive = '';
     let from = 'en'
     let to = 'fr'
 
-    const fetchLanguage = async () => {
+    fetch("./assets/json/languages.json")
+        .then((response) => response.json())
+        .then((data) => {
+            populateLanguages(data)
+        });
+
+    const populateLanguages = (data) => {
+        data.forEach((row, i) => {
+            if (i > 0) {
+                const item = Object.assign(document.createElement('li'), {
+                    className: 'custom-option',
+                    textContent: row.language
+                })
+                item.setAttribute('data-value', row.code)
+                dropdown.appendChild(item)
+            }
+        })
+    }
+
+    // fetch language from api
+    /* const fetchLanguage = async () => {
         const url = 'https://google-translate113.p.rapidapi.com/api/v1/translator/support-languages'
         const options = {
             method: 'GET',
@@ -34,7 +56,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
         try {
             const response = await fetch(url, options)
             const result = await response.json()
-
+            console.log(result)
             const dropdown = document.querySelector('.dropdown')
 
             result.forEach((row, i) => {
@@ -52,7 +74,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
             console.error(error)
         }
     }
-    // fetchLanguage()
+    fetchLanguage() */
 
     async function translate(text, from, to) {
         const url = 'https://google-translate113.p.rapidapi.com/api/v1/translator/text'
@@ -127,12 +149,38 @@ document.addEventListener('DOMContentLoaded', (e) => {
         characterCount.textContent = fromText.value.length
     }
     fromText.addEventListener('input', (e) => {
-        if (fromText.value.length === 0)
+        if (fromText.value.length === 0) {
+            fromListenBtn.classList.add('hidden')
+            toListenBtn.classList.add('hidden')
+            copyBtn.classList.add('hidden')
             toText.value = ''
+        } else {
+            fromListenBtn.classList.remove('hidden')
+        }
         updateCharacterCount()
     })
+    toText.addEventListener('selectionchange', (e) => {
+        console.log('ey')
+        if (toText.value.length === 0) {
+            toListenBtn.classList.add('hidden')
+            copyBtn.classList.add('hidden')
+        } else {
+            toListenBtn.classList.remove('hidden')
+            copyBtn.classList.remove('hidden')
+        }
+    })
+    fromListenBtn.addEventListener('click', (e) => {
+        fromListenBtn.classList.toggle('listening')
+        // HERE
+        let speech = new SpeechSynthesisUtterance()
+        speech.text = fromText.value
+        window.speechSynthesis.speak(speech)
+    })
+    toListenBtn.addEventListener('click', (e) => {
+        toListenBtn.classList.toggle('listening')
+    })
 
-    switchLanguage.addEventListener('click', (e) => {
+    switchLanguageBtn.addEventListener('click', (e) => {
         e.preventDefault()
         const temp = from
         from = to
@@ -174,15 +222,17 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const closeDropdown = () => {
         dropdownActive = ''
         dropdownGroup.classList.remove('open')
-        customSelect.forEach(btn => {
-            btn.classList.remove('selected')
-        })
+        document.querySelector('.selected').classList.remove('selected')
         refreshDropdown()
     }
 
     searchDropdown.addEventListener('keyup', (e) => {
         if (e.key === 'Escape') {
             closeDropdown()
+        }
+
+        if (e.key === 'Enter') {
+            // STOP
         }
 
         Array.from(dropdown.children).forEach(option => {
@@ -221,7 +271,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
             && !e.target.closest('#source-from') && !e.target.closest('#target-to')
             || e.target.closest('.custom-option')) {
             closeDropdown()
-            refreshDropdown()
         }
     })
 
@@ -231,16 +280,28 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
         // Copy the selected text to the clipboard
         document.execCommand("copy");
-
-        // Deselect the textarea
-        textarea.setSelectionRange(0, 0);
     }
 
-    document.getElementById('from-copy').addEventListener('click', (e) => {
-        copy(document.getElementById('translate-text'))
-    })
-
-    document.getElementById('to-copy').addEventListener('click', (e) => {
+    copyBtn.addEventListener('click', (e) => {
         copy(document.getElementById('translated-text'))
     })
+
+    console.log(window.speechSynthesis.getVoices())
 })
+
+/* let speech = new SpeechSynthesisUtterance()
+let voices = []
+let voiceSelect = document. querySe1ector("se1ect")
+
+window.speechSynthesis.onvoiceschanged = () => {
+    voices = window.speechSynthesis.getVoices()
+    speech. voice = voices[0]
+    voices.forEach((voice, i) => (voiceSelect.options[i] = new Option(voice.name, i)))
+}
+
+voiceSelect.addEventListener('change', () => {
+    speech.voice = voices[voiceSelect.value]
+})
+
+speech.text = 'speech'
+window.speechSynthesis.speak(speech) */
