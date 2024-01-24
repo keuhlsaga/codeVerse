@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Translator</title>
+</head>
+
+<body>
+    <header>
+        <a class="logo" href="index.html"><img src="assets/images/logo.svg" alt="logo"></a>
+    </header>
+    <main class="container">
+        <div class="content">
+            <div class="flex flex--header">
+                <div class="translate-header">
+                    <a href="#" class="menu-btn js-menu-btn sm-hide" id="source-auto">Detect Language</a>
+                    <a href="#" class="menu-btn js-menu-btn active" id="source-from">English</a>
+                    <a href="#" class="menu-btn js-menu-btn sm-hide" id="source-to">French</a>
+                    <span class="custom-select">
+                        <a href="" class="menu-btn select sm-hide" id="from-select">More</a>
+                        <div class="dropdown-group" id="dropdown-group">
+                            <input class="search-dropdown" id="search-dropdown" type="text"
+                                placeholder="Search languages">
+                            <ul class="dropdown" id="dropdown"></ul>
+                        </div>
+                    </span>
+                </div>
+                <button class="menu-btn menu-btn--switch" id="switch-language">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" d="m16 3l4 4l-4 4m-6-4h10M8 13l-4 4l4 4m-4-4h9" />
+                    </svg>
+                </button>
+                <div class="translate-header bg-dark">
+                    <a href="#" class="menu-btn js-menu-btn sm-hide" id="target-from">English</a>
+                    <a href="#" class="menu-btn js-menu-btn active" id="target-to">French</a>
+                    <span class="custom-select">
+                        <a href="" class="menu-btn select sm-hide" id="to-select">More</a>
+                    </span>
+                </div>
+            </div>
+            <div class="flex flex--body">
+                <div class="translate-panel">
+                    <div class="translate-body">
+                        <textarea class="translate-text" name="translate-text" id="translate-text" maxlength="500"
+                            placeholder="ENTER TEXT ..."></textarea>
+                        <span class="character-count">
+                            <span id="character-count">0</span> / 500
+                        </span>
+                    </div>
+                    <div class="translate-footer">
+                        <span class="controls">
+                            <button class="controls-btn controls-btn--listen" id="from-sound">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <g fill="none">
+                                        <path fill="currentColor" width="20" height="20"
+                                            d="M4.158 13.93a3.752 3.752 0 0 1 0-3.86a1.5 1.5 0 0 1 .993-.7l1.693-.339a.45.45 0 0 0 .258-.153L9.17 6.395c1.182-1.42 1.774-2.129 2.301-1.938C12 4.648 12 5.572 12 7.42v9.162c0 1.847 0 2.77-.528 2.962c-.527.19-1.119-.519-2.301-1.938L7.1 15.122a.45.45 0 0 0-.257-.153L5.15 14.63a1.5 1.5 0 0 1-.993-.7" />
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                            d="M14.536 8.464a5 5 0 0 1 .027 7.044m4.094-9.165a8 8 0 0 1 .044 11.27" />
+                                    </g>
+                                </svg>
+                            </button>
+                        </span>
+                        <button class="translate-btn" id="translate-btn" type="button">
+                            <span>
+                                <img src="assets/images/Sort_alfa.svg" alt="">
+                                Translate
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="translate-panel bg-dark">
+                    <div class="translate-body">
+                        <textarea class="translate-text" name="translated-text" id="translated-text"
+                            placeholder="TRANSLATION" readonly></textarea>
+                        <div class="loader hidden" id="loader">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="translate-footer">
+                        <span class="controls">
+                            <button class="controls-btn controls-btn--listen" id="to-sound">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <g fill="none">
+                                        <path fill="currentColor" width="20" height="20"
+                                            d="M4.158 13.93a3.752 3.752 0 0 1 0-3.86a1.5 1.5 0 0 1 .993-.7l1.693-.339a.45.45 0 0 0 .258-.153L9.17 6.395c1.182-1.42 1.774-2.129 2.301-1.938C12 4.648 12 5.572 12 7.42v9.162c0 1.847 0 2.77-.528 2.962c-.527.19-1.119-.519-2.301-1.938L7.1 15.122a.45.45 0 0 0-.257-.153L5.15 14.63a1.5 1.5 0 0 1-.993-.7" />
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                            d="M14.536 8.464a5 5 0 0 1 .027 7.044m4.094-9.165a8 8 0 0 1 .044 11.27" />
+                                    </g>
+                                </svg>
+                            </button>
+                            <button class="controls-btn controls-btn--copy" id="to-copy">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><g transform="translate(20 0) scale(-1 1)"><path fill="currentColor" d="M6 6V2c0-1.1.9-2 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-4v4a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V8c0-1.1.9-2 2-2zm2 0h4a2 2 0 0 1 2 2v4h4V2H8zM2 8v10h10V8z"/></g></svg>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="content">
+            <div class="translate-panel">
+                <div class="translate-header">
+                    <a href="#" class="menu-btn js-menu-btn" id="source-auto">Detect Language</a>
+                    <a href="#" class="menu-btn js-menu-btn active" id="source-from">English</a>
+                    <a href="#" class="menu-btn js-menu-btn" id="source-to">French</a>
+                    <span class="custom-select">
+                        <a href="" class="menu-btn select" id="from-select">More</a>
+                        <div class="dropdown-group" id="dropdown-group">
+                            <input class="search-dropdown" id="search-dropdown" type="text"
+                                placeholder="Search languages">
+                            <ul class="dropdown" id="dropdown"></ul>
+                        </div>
+                    </span>
+                </div>
+                <div class="translate-body">
+                    <textarea class="translate-text" name="translate-text" id="translate-text" maxlength="500"
+                        placeholder="ENTER TEXT ..."></textarea>
+                    <span class="character-count">
+                        <span id="character-count">0</span> / 500
+                    </span>
+                </div>
+                <div class="translate-footer">
+                    <span class="controls">
+                        <button class="controls-btn" id="from-sound"><img src="assets/images/sound_max_fill.svg"
+                                alt=""></button>
+                        <button class="controls-btn" id="from-copy"><img src="assets/images/Copy.svg" alt=""></button>
+                    </span>
+                    <button class="translate-btn" id="translate-btn" type="button">
+                        <span>
+                            <img src="assets/images/Sort_alfa.svg" alt="">
+                            Translate
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="translate-panel translate-panel--to">
+                <div class="translate-header">
+                    <a href="#" class="menu-btn js-menu-btn" id="target-from">English</a>
+                    <a href="#" class="menu-btn js-menu-btn active" id="target-to">French</a>
+                    <span class="custom-select">
+                        <a href="" class="menu-btn select" id="to-select">More</a>
+                    </span>
+                    <a href="" class="menu-btn justify-right" id="switch-language"></a>
+                </div>
+                <div class="translate-body">
+                    <textarea class="translate-text" name="translated-text" id="translated-text"
+                        placeholder="TRANSLATION" readonly></textarea>
+                    <div class="loader hidden" id="loader">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="translate-footer">
+                    <span class="controls">
+                        <button class="controls-btn" id="to-sound"><img src="assets/images/sound_max_fill.svg"
+                                alt=""></button>
+                        <button class="controls-btn" id="to-copy"><img src="assets/images/Copy.svg" alt=""></button>
+                    </span>
+                </div>
+            </div>
+        </div> -->
+    </main>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
