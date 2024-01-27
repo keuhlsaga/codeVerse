@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const fromListenBtn = document.getElementById('from-listen')
     const toListenBtn = document.getElementById('to-listen')
     const copyBtn = document.getElementById('copy')
-    let dropdownActive = '';
+    let dropdownActive = ''
     let from = 'en'
     let to = 'fr'
 
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
         .then((response) => response.json())
         .then((data) => {
             populateLanguages(data)
-        });
+        })
 
     const populateLanguages = (data) => {
         data.forEach((row, i) => {
@@ -41,40 +41,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
             }
         })
     }
-
-    // fetch language from api
-    /* const fetchLanguage = async () => {
-        const url = 'https://google-translate113.p.rapidapi.com/api/v1/translator/support-languages'
-        const options = {
-            method: 'GET',
-            headers: {
-                'X-RapidAPI-Key': 'a3d2a5e0c1msh12a87bb8eb2b5f3p1d31cfjsn175c5924cea0',
-                'X-RapidAPI-Host': 'google-translate113.p.rapidapi.com'
-            }
-        }
-
-        try {
-            const response = await fetch(url, options)
-            const result = await response.json()
-            console.log(result)
-            const dropdown = document.querySelector('.dropdown')
-
-            result.forEach((row, i) => {
-                if (i > 0) {
-                    const item = Object.assign(document.createElement('li'), {
-                        className: 'custom-option',
-                        textContent: row.language
-                    })
-                    item.setAttribute('data-value', row.code)
-                    dropdown.appendChild(item)
-                }
-            })
-
-        } catch (error) {
-            console.error(error)
-        }
-    }
-    fetchLanguage() */
 
     async function translate(text, from, to) {
         const url = 'https://google-translate113.p.rapidapi.com/api/v1/translator/text'
@@ -107,6 +73,9 @@ document.addEventListener('DOMContentLoaded', (e) => {
         // translate(words, from, to)
         loader.classList.remove('hidden')
         loader.classList.add('animate')
+
+        // TRIAL
+        toText.value = words
     })
 
     detectLanguage.addEventListener('click', (e) => {
@@ -160,7 +129,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
         updateCharacterCount()
     })
     toText.addEventListener('selectionchange', (e) => {
-        console.log('ey')
         if (toText.value.length === 0) {
             toListenBtn.classList.add('hidden')
             copyBtn.classList.add('hidden')
@@ -169,15 +137,96 @@ document.addEventListener('DOMContentLoaded', (e) => {
             copyBtn.classList.remove('hidden')
         }
     })
+
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    let audio = null
+    let audioText = null
+
+    const fetchAudio = async (text, languageCode) => {
+        const url = `https://text-to-speech27.p.rapidapi.com/speech?text=${text}&lang=${languageCode}`
+        const options = {
+            method: 'GET',
+            headers: {
+                'X-RapidAPI-Key': 'ef5e31c14bmsh100b01bc3c80a50p1e817fjsn19ee1d5a23d6',
+                'X-RapidAPI-Host': 'text-to-speech27.p.rapidapi.com'
+            }
+        }
+
+        try {
+            await fetch(url, options)
+                .then(data => data.arrayBuffer())
+                .then(arrayBuffer => ctx.decodeAudioData(arrayBuffer))
+                .then(decodedAudio => {
+                    audioText = text
+                    audio = decodedAudio
+                    return
+                })
+        } catch (error) {
+            console.error(error)
+        }
+    }
+
+    let soundPlaying = null
+    const fetchmp3 = async () => {
+        await fetch('./assets/british.mp3')
+            .then(data => data.arrayBuffer())
+            .then(arrayBuffer => ctx.decodeAudioData(arrayBuffer))
+            .then(decodedAudio => {
+                audio = decodedAudio
+            })
+    }
+    function playback(listenBtnId) {
+        console.log(document.getElementById(listenBtnId).classList.contains('listening'))
+        if (document.getElementById(listenBtnId).classList.contains('listening')) {
+            const playSound = ctx.createBufferSource();
+            soundPlaying = playSound
+            playSound.buffer = audio;
+            playSound.connect(ctx.destination);
+            playSound.start(ctx.currentTime);
+            playSound.addEventListener('ended', () => {
+                document.getElementById(listenBtnId).classList.remove('listening')
+            })
+        }
+    }
+
+    const synth = window.speechSynthesis
+    const listen = (text, languageCode, listenBtn) => {
+        listenBtn.classList.toggle('listening')
+        let listenBtnActiveId = listenBtn.id
+        if (synth.speaking) {
+            synth.cancel()
+            if (listenBtn === fromListenBtn)
+                listenBtnActiveId = toListenBtn.id
+            else if (listenBtn === toListenBtn)
+                listenBtnActiveId = fromListenBtn.id
+        }
+        if (soundPlaying) {
+            soundPlaying.stop()
+        }
+
+        if (languageCode === 'en') {
+            if (listenBtn.classList.contains('listening')) {
+                const speech = new SpeechSynthesisUtterance()
+                speech.text = text
+                synth.speak(speech)
+                speech.addEventListener('end', (e) => {
+                    document.getElementById(listenBtnActiveId).classList.remove('listening')
+                })
+            }
+        } else if (audio !== null) {
+            playback(listenBtn.id)
+        } else if (audio === null) {
+            // fetchAudio(text, languageCode)
+            //     .then(() => playback())
+            fetchmp3()
+                .then(() => playback(listenBtn.id))
+        }
+    }
     fromListenBtn.addEventListener('click', (e) => {
-        fromListenBtn.classList.toggle('listening')
-        // HERE
-        let speech = new SpeechSynthesisUtterance()
-        speech.text = fromText.value
-        window.speechSynthesis.speak(speech)
+        listen(fromText.value, from, fromListenBtn)
     })
     toListenBtn.addEventListener('click', (e) => {
-        toListenBtn.classList.toggle('listening')
+        listen(toText.value, to, toListenBtn)
     })
 
     switchLanguageBtn.addEventListener('click', (e) => {
@@ -229,19 +278,18 @@ document.addEventListener('DOMContentLoaded', (e) => {
     searchDropdown.addEventListener('keyup', (e) => {
         if (e.key === 'Escape') {
             closeDropdown()
+        } else if (e.key === 'Enter') {
+            const a = Array.from(dropdown.children).filter(option => !option.classList.contains('hidden'))
+            a[0].click()
+        } else {
+            Array.from(dropdown.children).forEach(option => {
+                if (!option.textContent.toLowerCase().includes(searchDropdown.value.toLowerCase())) {
+                    option.classList.add('hidden')
+                } else {
+                    option.classList.remove('hidden')
+                }
+            })
         }
-
-        if (e.key === 'Enter') {
-            // STOP
-        }
-
-        Array.from(dropdown.children).forEach(option => {
-            if (!option.textContent.toLowerCase().includes(searchDropdown.value.toLowerCase())) {
-                option.classList.add('hidden')
-            } else {
-                option.classList.remove('hidden')
-            }
-        })
     })
 
     window.addEventListener('click', (e) => {
@@ -275,33 +323,16 @@ document.addEventListener('DOMContentLoaded', (e) => {
     })
 
     const copy = (textarea) => {
-        textarea.select();
-        textarea.setSelectionRange(0, 99999); /* For mobile devices */
+        textarea.select()
+        textarea.setSelectionRange(0, 99999) /* For mobile devices */
 
         // Copy the selected text to the clipboard
-        document.execCommand("copy");
+        document.execCommand("copy")
+
+        // textarea.setSelectionRange(0, 0)
     }
 
     copyBtn.addEventListener('click', (e) => {
         copy(document.getElementById('translated-text'))
     })
-
-    console.log(window.speechSynthesis.getVoices())
 })
-
-/* let speech = new SpeechSynthesisUtterance()
-let voices = []
-let voiceSelect = document. querySe1ector("se1ect")
-
-window.speechSynthesis.onvoiceschanged = () => {
-    voices = window.speechSynthesis.getVoices()
-    speech. voice = voices[0]
-    voices.forEach((voice, i) => (voiceSelect.options[i] = new Option(voice.name, i)))
-}
-
-voiceSelect.addEventListener('change', () => {
-    speech.voice = voices[voiceSelect.value]
-})
-
-speech.text = 'speech'
-window.speechSynthesis.speak(speech) */
