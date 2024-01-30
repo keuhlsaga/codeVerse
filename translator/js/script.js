@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const dropdown = document.getElementById('dropdown')
     const fromText = document.getElementById('translate-text')
     const toText = document.getElementById('translated-text')
+    const clearTextBtn = document.getElementById('clear-text-btn')
     const characterCount = document.getElementById('character-count')
     const translateBtn = document.getElementById('translate-btn')
     const switchLanguageBtn = document.getElementById('switch-language')
@@ -23,18 +24,17 @@ document.addEventListener('DOMContentLoaded', (e) => {
     let from = 'en'
     let to = 'fr'
 
-    fetch("./assets/json/languages.json")
+    // Fetch languages
+    fetch('./assets/json/languages.json')
         .then((response) => response.json())
-        .then((data) => {
-            populateLanguages(data)
-        })
-
+        .then((data) => populateLanguages(data))
     const populateLanguages = (data) => {
         data.forEach((row, i) => {
             if (i > 0) {
                 const item = Object.assign(document.createElement('li'), {
                     className: 'custom-option',
-                    textContent: row.language
+                    textContent: row.language,
+                    tabIndex: '0'
                 })
                 item.setAttribute('data-value', row.code)
                 dropdown.appendChild(item)
@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
         })
     }
 
+    // Translate text
     async function translate(text, from, to) {
         const url = 'https://google-translate113.p.rapidapi.com/api/v1/translator/text'
         const options = {
@@ -78,168 +79,10 @@ document.addEventListener('DOMContentLoaded', (e) => {
         toText.value = words
     })
 
+    // Menu language selection
     detectLanguage.addEventListener('click', (e) => {
         from = 'auto'
     })
-
-    const dropdownListener = (e, targetDropdown, otherDropdown) => {
-        e.preventDefault()
-        targetDropdown.classList.toggle('selected')
-        if (!otherDropdown.classList.contains('selected')) {
-            dropdownGroup.classList.toggle('open')
-        } else {
-            otherDropdown.classList.remove('selected')
-        }
-        searchDropdown.value = ''
-        searchDropdown.focus()
-    }
-    sourceFrom.addEventListener('click', (e) => {
-        if (sourceFrom.classList.contains('active')) {
-            dropdownListener(e, sourceFrom, targetTo)
-            dropdownActive = 'from'
-        }
-    })
-    fromSelect.addEventListener('click', (e) => {
-        dropdownListener(e, fromSelect, toSelect)
-        dropdownActive = 'from'
-    })
-    targetTo.addEventListener('click', (e) => {
-        if (targetTo.classList.contains('active')) {
-            dropdownListener(e, targetTo, sourceFrom)
-            dropdownActive = 'to'
-        }
-    })
-    toSelect.addEventListener('click', (e) => {
-        dropdownListener(e, toSelect, fromSelect)
-        dropdownActive = 'to'
-    })
-
-    const updateCharacterCount = () => {
-        characterCount.textContent = fromText.value.length
-    }
-    fromText.addEventListener('input', (e) => {
-        if (fromText.value.length === 0) {
-            fromListenBtn.classList.add('hidden')
-            toListenBtn.classList.add('hidden')
-            copyBtn.classList.add('hidden')
-            toText.value = ''
-        } else {
-            fromListenBtn.classList.remove('hidden')
-        }
-        updateCharacterCount()
-    })
-    toText.addEventListener('selectionchange', (e) => {
-        if (toText.value.length === 0) {
-            toListenBtn.classList.add('hidden')
-            copyBtn.classList.add('hidden')
-        } else {
-            toListenBtn.classList.remove('hidden')
-            copyBtn.classList.remove('hidden')
-        }
-    })
-
-    const ctx = new (window.AudioContext || window.webkitAudioContext)();
-    let audio = null
-    let audioText = null
-
-    const fetchAudio = async (text, languageCode) => {
-        const url = `https://text-to-speech27.p.rapidapi.com/speech?text=${text}&lang=${languageCode}`
-        const options = {
-            method: 'GET',
-            headers: {
-                'X-RapidAPI-Key': 'ef5e31c14bmsh100b01bc3c80a50p1e817fjsn19ee1d5a23d6',
-                'X-RapidAPI-Host': 'text-to-speech27.p.rapidapi.com'
-            }
-        }
-
-        try {
-            await fetch(url, options)
-                .then(data => data.arrayBuffer())
-                .then(arrayBuffer => ctx.decodeAudioData(arrayBuffer))
-                .then(decodedAudio => {
-                    audioText = text
-                    audio = decodedAudio
-                    return
-                })
-        } catch (error) {
-            console.error(error)
-        }
-    }
-
-    let soundPlaying = null
-    const fetchmp3 = async () => {
-        await fetch('./assets/british.mp3')
-            .then(data => data.arrayBuffer())
-            .then(arrayBuffer => ctx.decodeAudioData(arrayBuffer))
-            .then(decodedAudio => {
-                audio = decodedAudio
-            })
-    }
-    function playback(listenBtnId) {
-        console.log(document.getElementById(listenBtnId).classList.contains('listening'))
-        if (document.getElementById(listenBtnId).classList.contains('listening')) {
-            const playSound = ctx.createBufferSource();
-            soundPlaying = playSound
-            playSound.buffer = audio;
-            playSound.connect(ctx.destination);
-            playSound.start(ctx.currentTime);
-            playSound.addEventListener('ended', () => {
-                document.getElementById(listenBtnId).classList.remove('listening')
-            })
-        }
-    }
-
-    const synth = window.speechSynthesis
-    const listen = (text, languageCode, listenBtn) => {
-        listenBtn.classList.toggle('listening')
-        let listenBtnActiveId = listenBtn.id
-        if (synth.speaking) {
-            synth.cancel()
-            if (listenBtn === fromListenBtn)
-                listenBtnActiveId = toListenBtn.id
-            else if (listenBtn === toListenBtn)
-                listenBtnActiveId = fromListenBtn.id
-        }
-        if (soundPlaying) {
-            soundPlaying.stop()
-        }
-
-        if (languageCode === 'en') {
-            if (listenBtn.classList.contains('listening')) {
-                const speech = new SpeechSynthesisUtterance()
-                speech.text = text
-                synth.speak(speech)
-                speech.addEventListener('end', (e) => {
-                    document.getElementById(listenBtnActiveId).classList.remove('listening')
-                })
-            }
-        } else if (audio !== null) {
-            playback(listenBtn.id)
-        } else if (audio === null) {
-            // fetchAudio(text, languageCode)
-            //     .then(() => playback())
-            fetchmp3()
-                .then(() => playback(listenBtn.id))
-        }
-    }
-    fromListenBtn.addEventListener('click', (e) => {
-        listen(fromText.value, from, fromListenBtn)
-    })
-    toListenBtn.addEventListener('click', (e) => {
-        listen(toText.value, to, toListenBtn)
-    })
-
-    switchLanguageBtn.addEventListener('click', (e) => {
-        e.preventDefault()
-        const temp = from
-        from = to
-        to = temp
-        const tempText = fromText.value
-        fromText.value = toText.value
-        toText.value = tempText
-        updateCharacterCount()
-    })
-
     const menuBtnListener = (element) => {
         element.classList.add('active')
         const i = Array.from(menuBtn).findIndex(btn => btn === element)
@@ -261,20 +104,141 @@ document.addEventListener('DOMContentLoaded', (e) => {
             }
         }
     }
+    window.addEventListener('click', (e) => {
+        if (e.target.closest('.js-menu-btn')) {
+            menuBtnListener(e.target)
+        }
 
+        if (e.target.closest('.custom-option')) {
+            const code = e.target.getAttribute('data-value')
+            if (dropdownActive === 'from') {
+                from = code
+                if (from !== to) {
+                    sourceFrom.setAttribute('data-value', e.target.getAttribute('data-value'))
+                    targetFrom.setAttribute('data-value', e.target.getAttribute('data-value'))
+                    sourceFrom.textContent = e.target.textContent
+                    targetFrom.textContent = e.target.textContent
+                    menuBtnListener(sourceFrom)
+                } else {
+                    if (!detectLanguage.classList.contains('active')) {
+                        if (sourceFrom.classList.contains('active')) {
+                            sourceTo.click()
+                            menuBtnListener(sourceTo)
+                        } else {
+                            sourceFrom.click()
+                            menuBtnListener(sourceFrom)
+                        }
+                    } else {
+                        if (from === sourceFrom.getAttribute('data-value')) {
+                            sourceFrom.click()
+                            menuBtnListener(sourceFrom)
+                        }
+                        else {
+                            sourceTo.click()
+                            menuBtnListener(sourceTo)
+                        }
+                    }
+                }
+            } else if (dropdownActive === 'to') {
+                to = code
+                if (to !== from) {
+                    sourceTo.setAttribute('data-value', e.target.getAttribute('data-value'))
+                    targetTo.setAttribute('data-value', e.target.getAttribute('data-value'))
+                    sourceTo.textContent = e.target.textContent
+                    targetTo.textContent = e.target.textContent
+                    menuBtnListener(targetTo)
+                } else {
+                    if (targetFrom.classList.contains('active')) {
+                        targetTo.click()
+                        menuBtnListener(targetTo)
+                    } else {
+                        targetFrom.click()
+                        menuBtnListener(targetFrom)
+                    }
+                }
+            }
+        }
+
+        if (!e.target.closest('.select') && !e.target.closest('#drodpown-group')
+            && dropdownGroup.classList.contains('open') && !e.target.closest('.search-dropdown')
+            && !e.target.closest('.active') || e.target.closest('.custom-option')) {
+            closeDropdown()
+        }
+    })
+
+    // Custom dropdown
+    const openDropdown = (targetDropdown) => {
+        dropdownGroup.classList.toggle('open')
+        if (dropdownGroup.classList.contains('open')) {
+            targetDropdown.classList.toggle('selected')
+            if (targetDropdown === sourceFrom || targetDropdown === sourceTo) {
+                fromSelect.classList.toggle('selected')
+                if (toSelect.classList.contains('selected'))
+                    toSelect.classList.toggle('selected')
+            } else if (targetDropdown === targetFrom || targetDropdown === targetTo) {
+                toSelect.classList.toggle('selected')
+                if (fromSelect.classList.contains('selected'))
+                    fromSelect.classList.toggle('selected')
+            }
+        } else {
+            document.querySelectorAll('.selected').forEach((btn) => {
+                btn.classList.remove('selected')
+            })
+        }
+        searchDropdown.value = ''
+        searchDropdown.focus()
+    }
     const refreshDropdown = () => {
         Array.from(dropdown.children).forEach(option => {
             option.classList.remove('hidden')
         })
     }
-
     const closeDropdown = () => {
         dropdownActive = ''
         dropdownGroup.classList.remove('open')
         document.querySelector('.selected').classList.remove('selected')
         refreshDropdown()
     }
-
+    sourceFrom.addEventListener('click', (e) => {
+        from = sourceFrom.getAttribute('data-value')
+        to = targetTo.getAttribute('data-value')
+        if (sourceFrom.classList.contains('active')) {
+            openDropdown(sourceFrom)
+            dropdownActive = 'from'
+        }
+    })
+    sourceTo.addEventListener('click', (e) => {
+        from = sourceTo.getAttribute('data-value')
+        to = targetFrom.getAttribute('data-value')
+        if (sourceTo.classList.contains('active')) {
+            openDropdown(sourceTo)
+            dropdownActive = 'from'
+        }
+    })
+    fromSelect.addEventListener('click', (e) => {
+        openDropdown(fromSelect)
+        dropdownActive = 'from'
+    })
+    targetFrom.addEventListener('click', (e) => {
+        from = sourceTo.getAttribute('data-value')
+        to = targetFrom.getAttribute('data-value')
+        if (targetFrom.classList.contains('active')) {
+            openDropdown(targetFrom)
+            dropdownActive = 'to'
+        }
+    })
+    targetTo.addEventListener('click', (e) => {
+        from = sourceFrom.getAttribute('data-value')
+        to = targetTo.getAttribute('data-value')
+        if (targetTo.classList.contains('active')) {
+            openDropdown(targetTo)
+            dropdownActive = 'to'
+        }
+    })
+    toSelect.addEventListener('click', (e) => {
+        openDropdown(toSelect)
+        dropdownActive = 'to'
+    })
     searchDropdown.addEventListener('keyup', (e) => {
         if (e.key === 'Escape') {
             closeDropdown()
@@ -290,38 +254,233 @@ document.addEventListener('DOMContentLoaded', (e) => {
                 }
             })
         }
+        if (e.key === 'ArrowDown') {
+            dropdown.children[0].focus()
+        }
+    })
+    window.addEventListener('keydown', (e) => {
+        if (dropdownGroup.classList.contains('open') && e.key === 'Escape')
+            dropdownGroup.classList.remove('open')
+    })
+    window.addEventListener('resize', (e) => {
+        if (screen.width <= 840) {
+            Array.from(dropdown.children).forEach((option) => {
+                if (option.getAttribute('data-value') === from) {
+                    sourceFrom.textContent = option.textContent
+                    sourceFrom.setAttribute('data-value', option.getAttribute('data-value'))
+                } else if (option.getAttribute('data-value') === to) {
+                    targetTo.textContent = option.textContent
+                    targetTo.setAttribute('data-value', option.getAttribute('data-value'))
+                }
+            })
+        }
     })
 
-    window.addEventListener('click', (e) => {
-        if (e.target.closest('.js-menu-btn')) {
-            menuBtnListener(e.target)
+    // Textarea character count
+    const updateCharacterCount = () => {
+        characterCount.textContent = fromText.value.length
+    }
+    fromText.addEventListener('input', (e) => {
+        if (fromText.value.length === 0) {
+            fromListenBtn.classList.add('hidden')
+            toListenBtn.classList.add('hidden')
+            copyBtn.classList.add('hidden')
+            toText.value = ''
+            clearTextBtn.classList.add('hidden')
+        } else {
+            fromListenBtn.classList.remove('hidden')
+            clearTextBtn.classList.remove('hidden')
         }
+        updateCharacterCount()
+    })
+    // Show/hide control buttons
+    toText.addEventListener('selectionchange', (e) => {
+        if (toText.value.length === 0) {
+            toListenBtn.classList.add('hidden')
+            copyBtn.classList.add('hidden')
+        } else {
+            toListenBtn.classList.remove('hidden')
+            copyBtn.classList.remove('hidden')
+        }
+    })
+    clearTextBtn.addEventListener('click', (e) => {
+        fromText.value = ''
+        toText.value = ''
+        updateCharacterCount()
+        fromListenBtn.classList.add('hidden')
+        clearTextBtn.classList.add('hidden')
+    })
+    clearTextBtn.addEventListener('mouseenter', (e) => {
+        createPopover(clearTextBtn, 'Clear Text', 'bottom')
+    })
+    clearTextBtn.addEventListener('mouseleave', (e) => {
+        removePopover()
+    })
 
-        if (e.target.closest('.custom-option')) {
-            const code = e.target.getAttribute('data-value')
-            if (dropdownActive === 'from') {
-                from = code
-                sourceFrom.textContent = e.target.textContent
-                targetFrom.textContent = e.target.textContent
-                menuBtnListener(sourceFrom)
-            } else if (dropdownActive === 'to') {
-                to = code
-                sourceTo.textContent = e.target.textContent
-                targetTo.textContent = e.target.textContent
-                menuBtnListener(targetTo)
+    // Text to speech
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    let audio = null
+    let audioText = null
+    let ttsSupported = false
+    // Fetch supported languages for TTS
+    const fetchTtsSupportedLanguage = async () => {
+        return fetch('./assets/json/voices.json')
+            .then((response) => response.json())
+    }
+    const fetchAudio = async (text, languageCode) => {
+        const url = `https://text-to-speech27.p.rapidapi.com/speech?text=${text}&lang=${languageCode}`
+        const options = {
+            method: 'GET',
+            headers: {
+                'X-RapidAPI-Key': 'ef5e31c14bmsh100b01bc3c80a50p1e817fjsn19ee1d5a23d6',
+                'X-RapidAPI-Host': 'text-to-speech27.p.rapidapi.com'
             }
-            console.log(dropdownActive)
-            console.log(from, '-', to)
         }
 
-        if (!e.target.closest('.select') && !e.target.closest('#drodpown-group')
-            && dropdownGroup.classList.contains('open') && !e.target.closest('.search-dropdown')
-            && !e.target.closest('#source-from') && !e.target.closest('#target-to')
-            || e.target.closest('.custom-option')) {
-            closeDropdown()
+        try {
+            await fetch(url, options)
+                .then(data => data.arrayBuffer())
+                .then(arrayBuffer => ctx.decodeAudioData(arrayBuffer))
+                .then(decodedAudio => {
+                    audioText = text
+                    audio = decodedAudio
+                })
+        } catch (error) {
+            console.error(error)
         }
+    }
+    let soundPlaying = null
+    const fetchmp3 = async () => {
+        await fetch('./assets/british.mp3')
+            .then(data => data.arrayBuffer())
+            .then(arrayBuffer => ctx.decodeAudioData(arrayBuffer))
+            .then(decodedAudio => {
+                audio = decodedAudio
+            })
+    }
+    function playback(listenBtnId) {
+        if (document.getElementById(listenBtnId).classList.contains('listening')) {
+            const playSound = ctx.createBufferSource();
+            soundPlaying = playSound
+            playSound.buffer = audio;
+            playSound.connect(ctx.destination);
+            playSound.start(ctx.currentTime);
+            playSound.addEventListener('ended', () => {
+                document.getElementById(listenBtnId).classList.remove('listening')
+            })
+        }
+    }
+    const synth = window.speechSynthesis
+    const listen = (text, languageCode, listenBtn) => {
+        listenBtn.classList.toggle('listening')
+        let listenBtnActiveId = listenBtn.id
+        if (synth.speaking) {
+            synth.cancel()
+            if (listenBtn === fromListenBtn)
+                listenBtnActiveId = toListenBtn.id
+            else if (listenBtn === toListenBtn)
+                listenBtnActiveId = fromListenBtn.id
+        }
+        if (soundPlaying)
+            soundPlaying.stop()
+
+        if (languageCode === 'en') {
+            if (listenBtn.classList.contains('listening')) {
+                const speech = new SpeechSynthesisUtterance()
+                speech.text = text
+                synth.speak(speech)
+                speech.addEventListener('end', (e) => {
+                    document.getElementById(listenBtnActiveId).classList.remove('listening')
+                })
+            }
+        } else if (audio !== null) {
+            playback(listenBtn.id)
+        } else if (audio === null) {
+            listenLoader(listenBtn)
+            // fetchAudio(text, languageCode)
+            //     .then(() => {
+            //         removeListenLoader()
+            //         playback(listenBtn.id)
+            //     })
+            fetchmp3()
+                .then(() => {
+                    removeListenLoader()
+                    playback(listenBtn.id)
+                })
+        }
+    }
+    // Listen button listener
+    fetchTtsSupportedLanguage()
+        .then((data) => {
+            const listenHover = (element, languageCode) => {
+                let text = 'Listen'
+                if (Object.entries(data).filter(([key]) => key === languageCode).length === 0) {
+                    ttsSupported = false
+                    text = 'Language is not supported'
+                } else {
+                    ttsSupported = true
+                }
+                if (element.classList.contains('listening'))
+                    text = 'Stop'
+                createPopover(element, text, 'top')
+            }
+            fromListenBtn.addEventListener('click', (e) => {
+                removePopover()
+                if (ttsSupported)
+                    listen(fromText.value, from, fromListenBtn)
+            })
+            fromListenBtn.addEventListener('mouseenter', (e) => {
+                listenHover(fromListenBtn, from)
+            })
+            fromListenBtn.addEventListener('mouseleave', (e) => {
+                removePopover()
+            })
+            toListenBtn.addEventListener('click', (e) => {
+                removePopover()
+                if (ttsSupported)
+                    listen(toText.value, to, toListenBtn)
+            })
+            toListenBtn.addEventListener('mouseenter', (e) => {
+                listenHover(toListenBtn, to)
+            })
+            toListenBtn.addEventListener('mouseleave', (e) => {
+                removePopover()
+            })
+        })
+
+    // Swtich language
+    switchLanguageBtn.addEventListener('click', (e) => {
+        e.preventDefault()
+        removePopover()
+        const temp = from
+        from = to
+        to = temp
+        const tempText = fromText.value
+        fromText.value = toText.value
+        toText.value = tempText
+        const menuTemp = sourceFrom
+        if (sourceFrom.classList.contains('active')) {
+            sourceFrom.classList.remove('active')
+            targetTo.classList.remove('active')
+            sourceTo.classList.add('active')
+            targetFrom.classList.add('active')
+        } else if (sourceTo.classList.contains('active')) {
+            sourceTo.classList.remove('active')
+            targetFrom.classList.remove('active')
+            sourceFrom.classList.add('active')
+            targetTo.classList.add('active')
+        }
+        updateCharacterCount()
+    })
+    switchLanguageBtn.addEventListener('mouseenter', (e) => {
+        createPopover(switchLanguageBtn, 'Switch language', 'bottom')
+    })
+    switchLanguageBtn.addEventListener('mouseleave', (e) => {
+        removePopover()
     })
 
+    // Copy translated text
+    let isCopying = false
     const copy = (textarea) => {
         textarea.select()
         textarea.setSelectionRange(0, 99999) /* For mobile devices */
@@ -329,10 +488,73 @@ document.addEventListener('DOMContentLoaded', (e) => {
         // Copy the selected text to the clipboard
         document.execCommand("copy")
 
-        // textarea.setSelectionRange(0, 0)
-    }
+        textarea.setSelectionRange(0, 0)
 
+        createPopover(copyBtn, 'Copied', 'top')
+        setTimeout(() => {
+            removePopover()
+            isCopying = false
+        }, 1500)
+    }
     copyBtn.addEventListener('click', (e) => {
+        removePopover()
+        isCopying = true
         copy(document.getElementById('translated-text'))
     })
+    copyBtn.addEventListener('mouseenter', (e) => {
+        if (!isCopying) {
+            createPopover(copyBtn, 'Copy', 'top')
+        }
+    })
+    copyBtn.addEventListener('mouseleave', (e) => {
+        removePopover()
+    })
+    // Popover
+    let timeout = null
+    function createPopover(element, text, position) {
+        const popover = Object.assign(document.createElement('span'), {
+            className: 'popover',
+            id: 'popover',
+            textContent: text
+        })
+        element.parentElement.appendChild(popover)
+        popover.style.opacity = 0
+
+        let top = element.offsetTop
+        if (position === 'top')
+            top -= element.offsetHeight
+        else if (position === 'bottom')
+            top += element.offsetHeight + 15
+        popover.style.top = top + 'px'
+
+        let left = element.offsetLeft
+        console.log(left - popover.offsetWidth)
+        if (screen.width < left + popover.offsetWidth)
+            left = left - popover.offsetWidth + 30
+        popover.style.left = left + 'px'
+
+        timeout = setTimeout(() => {
+            popover.style.opacity = 1
+        }, 250)
+    }
+    function removePopover() {
+        clearTimeout(timeout)
+        if (document.getElementById('popover'))
+            document.getElementById('popover').remove()
+    }
+    // Listen loader
+    function listenLoader(element) {
+        const loader = Object.assign(document.createElement('div'), {
+            className: 'listen-loader'
+        })
+        element.appendChild(loader)
+    }
+    function removeListenLoader() {
+        document.querySelector('.listen-loader').remove()
+    }
+})
+
+// DELETE THIS!
+window.addEventListener('mousemove', (e) => {
+    // console.log(e.target)
 })
