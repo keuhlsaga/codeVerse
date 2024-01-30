@@ -1,12 +1,9 @@
 document.addEventListener('DOMContentLoaded', (e) => {
-    const menuBtn = document.querySelectorAll('.js-menu-btn')
-    const detectLanguage = document.getElementById('source-auto')
-    const sourceFrom = document.getElementById('source-from')
-    const sourceTo = document.getElementById('source-to')
-    const targetFrom = document.getElementById('target-from')
-    const targetTo = document.getElementById('target-to')
+    const detectLanguage = document.getElementById('detect-language')
     const fromSelect = document.getElementById('from-select')
     const toSelect = document.getElementById('to-select')
+    const fromExpand = document.getElementById('from-expand')
+    const toExpand = document.getElementById('to-expand')
     const searchDropdown = document.getElementById('search-dropdown')
     const dropdownGroup = document.getElementById('dropdown-group')
     const dropdown = document.getElementById('dropdown')
@@ -69,7 +66,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
             console.error(error)
         }
     }
-    translateBtn.addEventListener('click', (e) => {
+    translateBtn.addEventListener('click', () => {
         const words = document.getElementById('translate-text').value
         // translate(words, from, to)
         loader.classList.remove('hidden')
@@ -80,111 +77,39 @@ document.addEventListener('DOMContentLoaded', (e) => {
     })
 
     // Menu language selection
-    detectLanguage.addEventListener('click', (e) => {
+    detectLanguage.addEventListener('click', () => {
         from = 'auto'
+        if (fromSelect.classList.contains('active'))
+            fromSelect.classList.remove('active')
     })
-    const menuBtnListener = (element) => {
-        element.classList.add('active')
-        const i = Array.from(menuBtn).findIndex(btn => btn === element)
-        if (i !== 0) {
-            if (!menuBtn[0].classList.contains('active'))
-                menuBtn[5 - i].classList.add('active')
-
-            menuBtn.forEach((btn, j) => {
-                if (i > 2 && menuBtn[0].classList.contains('active')) {
-                    if (j > 2 && j != i && j !== 5 - i)
-                        btn.classList.remove('active')
-                } else if (j != i && j !== 5 - i)
-                    btn.classList.remove('active')
-            })
-        } else {
-            for (let i = 1; i <= 2; i++) {
-                if (menuBtn[i].classList.contains('active'))
-                    menuBtn[i].classList.remove('active')
-            }
-        }
-    }
     window.addEventListener('click', (e) => {
-        if (e.target.closest('.js-menu-btn')) {
-            menuBtnListener(e.target)
-        }
-
         if (e.target.closest('.custom-option')) {
             const code = e.target.getAttribute('data-value')
             if (dropdownActive === 'from') {
                 from = code
-                if (from !== to) {
-                    sourceFrom.setAttribute('data-value', e.target.getAttribute('data-value'))
-                    targetFrom.setAttribute('data-value', e.target.getAttribute('data-value'))
-                    sourceFrom.textContent = e.target.textContent
-                    targetFrom.textContent = e.target.textContent
-                    menuBtnListener(sourceFrom)
-                } else {
-                    if (!detectLanguage.classList.contains('active')) {
-                        if (sourceFrom.classList.contains('active')) {
-                            sourceTo.click()
-                            menuBtnListener(sourceTo)
-                        } else {
-                            sourceFrom.click()
-                            menuBtnListener(sourceFrom)
-                        }
-                    } else {
-                        if (from === sourceFrom.getAttribute('data-value')) {
-                            sourceFrom.click()
-                            menuBtnListener(sourceFrom)
-                        }
-                        else {
-                            sourceTo.click()
-                            menuBtnListener(sourceTo)
-                        }
-                    }
-                }
+                fromSelect.textContent = e.target.textContent
             } else if (dropdownActive === 'to') {
                 to = code
-                if (to !== from) {
-                    sourceTo.setAttribute('data-value', e.target.getAttribute('data-value'))
-                    targetTo.setAttribute('data-value', e.target.getAttribute('data-value'))
-                    sourceTo.textContent = e.target.textContent
-                    targetTo.textContent = e.target.textContent
-                    menuBtnListener(targetTo)
-                } else {
-                    if (targetFrom.classList.contains('active')) {
-                        targetTo.click()
-                        menuBtnListener(targetTo)
-                    } else {
-                        targetFrom.click()
-                        menuBtnListener(targetFrom)
-                    }
-                }
+                toSelect.textContent = e.target.textContent
             }
         }
 
         if (!e.target.closest('.select') && !e.target.closest('#drodpown-group')
             && dropdownGroup.classList.contains('open') && !e.target.closest('.search-dropdown')
-            && !e.target.closest('.active') || e.target.closest('.custom-option')) {
+            && !e.target.closest('.active') || e.target.closest('.custom-option')
+            || e.target.closest('#detect-language')) {
             closeDropdown()
         }
     })
 
     // Custom dropdown
     const openDropdown = (targetDropdown) => {
-        dropdownGroup.classList.toggle('open')
-        if (dropdownGroup.classList.contains('open')) {
+        if (targetDropdown.classList.contains('active'))
+            dropdownGroup.classList.toggle('open')
+        if (document.querySelector('.selected'))
+            document.querySelector('.selected').classList.remove('selected')
+        if (dropdownGroup.classList.contains('open'))
             targetDropdown.classList.toggle('selected')
-            if (targetDropdown === sourceFrom || targetDropdown === sourceTo) {
-                fromSelect.classList.toggle('selected')
-                if (toSelect.classList.contains('selected'))
-                    toSelect.classList.toggle('selected')
-            } else if (targetDropdown === targetFrom || targetDropdown === targetTo) {
-                toSelect.classList.toggle('selected')
-                if (fromSelect.classList.contains('selected'))
-                    fromSelect.classList.toggle('selected')
-            }
-        } else {
-            document.querySelectorAll('.selected').forEach((btn) => {
-                btn.classList.remove('selected')
-            })
-        }
         searchDropdown.value = ''
         searchDropdown.focus()
     }
@@ -199,43 +124,27 @@ document.addEventListener('DOMContentLoaded', (e) => {
         document.querySelector('.selected').classList.remove('selected')
         refreshDropdown()
     }
-    sourceFrom.addEventListener('click', (e) => {
-        from = sourceFrom.getAttribute('data-value')
-        to = targetTo.getAttribute('data-value')
-        if (sourceFrom.classList.contains('active')) {
-            openDropdown(sourceFrom)
-            dropdownActive = 'from'
-        }
-    })
-    sourceTo.addEventListener('click', (e) => {
-        from = sourceTo.getAttribute('data-value')
-        to = targetFrom.getAttribute('data-value')
-        if (sourceTo.classList.contains('active')) {
-            openDropdown(sourceTo)
-            dropdownActive = 'from'
-        }
-    })
-    fromSelect.addEventListener('click', (e) => {
+    fromSelect.addEventListener('click', () => {
         openDropdown(fromSelect)
         dropdownActive = 'from'
-    })
-    targetFrom.addEventListener('click', (e) => {
-        from = sourceTo.getAttribute('data-value')
-        to = targetFrom.getAttribute('data-value')
-        if (targetFrom.classList.contains('active')) {
-            openDropdown(targetFrom)
-            dropdownActive = 'to'
+        if (detectLanguage.classList.contains('active')) {
+            detectLanguage.classList.remove('active')
+            fromSelect.classList.add('active')
         }
     })
-    targetTo.addEventListener('click', (e) => {
-        from = sourceFrom.getAttribute('data-value')
-        to = targetTo.getAttribute('data-value')
-        if (targetTo.classList.contains('active')) {
-            openDropdown(targetTo)
-            dropdownActive = 'to'
+    fromExpand.addEventListener('click', () => {
+        openDropdown(fromSelect)
+        dropdownActive = 'from'
+        if (detectLanguage.classList.contains('active')) {
+            detectLanguage.classList.remove('active')
+            fromSelect.classList.add('active')
         }
     })
-    toSelect.addEventListener('click', (e) => {
+    toSelect.addEventListener('click', () => {
+        openDropdown(toSelect)
+        dropdownActive = 'to'
+    })
+    toExpand.addEventListener('click', () => {
         openDropdown(toSelect)
         dropdownActive = 'to'
     })
@@ -262,7 +171,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
         if (dropdownGroup.classList.contains('open') && e.key === 'Escape')
             dropdownGroup.classList.remove('open')
     })
-    window.addEventListener('resize', (e) => {
+    window.addEventListener('resize', () => {
         if (screen.width <= 840) {
             Array.from(dropdown.children).forEach((option) => {
                 if (option.getAttribute('data-value') === from) {
@@ -280,7 +189,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const updateCharacterCount = () => {
         characterCount.textContent = fromText.value.length
     }
-    fromText.addEventListener('input', (e) => {
+    fromText.addEventListener('input', () => {
         if (fromText.value.length === 0) {
             fromListenBtn.classList.add('hidden')
             toListenBtn.classList.add('hidden')
@@ -294,7 +203,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
         updateCharacterCount()
     })
     // Show/hide control buttons
-    toText.addEventListener('selectionchange', (e) => {
+    toText.addEventListener('selectionchange', () => {
         if (toText.value.length === 0) {
             toListenBtn.classList.add('hidden')
             copyBtn.classList.add('hidden')
@@ -303,17 +212,17 @@ document.addEventListener('DOMContentLoaded', (e) => {
             copyBtn.classList.remove('hidden')
         }
     })
-    clearTextBtn.addEventListener('click', (e) => {
+    clearTextBtn.addEventListener('click', () => {
         fromText.value = ''
         toText.value = ''
         updateCharacterCount()
         fromListenBtn.classList.add('hidden')
         clearTextBtn.classList.add('hidden')
     })
-    clearTextBtn.addEventListener('mouseenter', (e) => {
+    clearTextBtn.addEventListener('mouseenter', () => {
         createPopover(clearTextBtn, 'Clear Text', 'bottom')
     })
-    clearTextBtn.addEventListener('mouseleave', (e) => {
+    clearTextBtn.addEventListener('mouseleave', () => {
         removePopover()
     })
 
@@ -424,58 +333,56 @@ document.addEventListener('DOMContentLoaded', (e) => {
                     text = 'Stop'
                 createPopover(element, text, 'top')
             }
-            fromListenBtn.addEventListener('click', (e) => {
+            fromListenBtn.addEventListener('click', () => {
                 removePopover()
                 if (ttsSupported)
                     listen(fromText.value, from, fromListenBtn)
             })
-            fromListenBtn.addEventListener('mouseenter', (e) => {
+            fromListenBtn.addEventListener('mouseenter', () => {
                 listenHover(fromListenBtn, from)
             })
-            fromListenBtn.addEventListener('mouseleave', (e) => {
+            fromListenBtn.addEventListener('mouseleave', () => {
                 removePopover()
             })
-            toListenBtn.addEventListener('click', (e) => {
+            toListenBtn.addEventListener('click', () => {
                 removePopover()
                 if (ttsSupported)
                     listen(toText.value, to, toListenBtn)
             })
-            toListenBtn.addEventListener('mouseenter', (e) => {
+            toListenBtn.addEventListener('mouseenter', () => {
                 listenHover(toListenBtn, to)
             })
-            toListenBtn.addEventListener('mouseleave', (e) => {
+            toListenBtn.addEventListener('mouseleave', () => {
                 removePopover()
             })
         })
 
     // Swtich language
-    switchLanguageBtn.addEventListener('click', (e) => {
-        e.preventDefault()
-        removePopover()
-        const temp = from
-        from = to
-        to = temp
-        const tempText = fromText.value
-        fromText.value = toText.value
-        toText.value = tempText
-        const menuTemp = sourceFrom
-        if (sourceFrom.classList.contains('active')) {
-            sourceFrom.classList.remove('active')
-            targetTo.classList.remove('active')
-            sourceTo.classList.add('active')
-            targetFrom.classList.add('active')
-        } else if (sourceTo.classList.contains('active')) {
-            sourceTo.classList.remove('active')
-            targetFrom.classList.remove('active')
-            sourceFrom.classList.add('active')
-            targetTo.classList.add('active')
+    switchLanguageBtn.addEventListener('click', () => {
+        if (!detectLanguage.classList.contains('active')) {
+            removePopover()
+            const temp = from
+            from = to
+            to = temp
+            const switchText = fromText.value
+            fromText.value = toText.value
+            toText.value = switchText
+            const switchLanguage = fromSelect.textContent
+            fromSelect.textContent = toSelect.textContent
+            toSelect.textContent = switchLanguage
         }
         updateCharacterCount()
     })
-    switchLanguageBtn.addEventListener('mouseenter', (e) => {
+    switchLanguageBtn.addEventListener('mouseenter', () => {
+        if (detectLanguage.classList.contains('active')) {
+            switchLanguageBtn.style.cursor = 'default'
+        }
         createPopover(switchLanguageBtn, 'Switch language', 'bottom')
     })
-    switchLanguageBtn.addEventListener('mouseleave', (e) => {
+    switchLanguageBtn.addEventListener('mouseleave', () => {
+        if (detectLanguage.classList.contains('active')) {
+            switchLanguageBtn.style.cursor = 'pointer'
+        }
         removePopover()
     })
 
@@ -496,17 +403,17 @@ document.addEventListener('DOMContentLoaded', (e) => {
             isCopying = false
         }, 1500)
     }
-    copyBtn.addEventListener('click', (e) => {
+    copyBtn.addEventListener('click', () => {
         removePopover()
         isCopying = true
         copy(document.getElementById('translated-text'))
     })
-    copyBtn.addEventListener('mouseenter', (e) => {
+    copyBtn.addEventListener('mouseenter', () => {
         if (!isCopying) {
             createPopover(copyBtn, 'Copy', 'top')
         }
     })
-    copyBtn.addEventListener('mouseleave', (e) => {
+    copyBtn.addEventListener('mouseleave', () => {
         removePopover()
     })
     // Popover
@@ -552,9 +459,4 @@ document.addEventListener('DOMContentLoaded', (e) => {
     function removeListenLoader() {
         document.querySelector('.listen-loader').remove()
     }
-})
-
-// DELETE THIS!
-window.addEventListener('mousemove', (e) => {
-    // console.log(e.target)
 })

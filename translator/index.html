@@ -21,15 +21,15 @@
         <div class="content">
             <div class="translate-container translate-container--header">
                 <div class="translate-header">
-                    <div class="overflow">
-                        <div>
-                            <button class="menu-btn js-menu-btn" id="source-auto">Detect Language</button>
-                            <button class="menu-btn js-menu-btn sm-show active" id="source-from" data-value="en">English</button>
-                            <button class="menu-btn js-menu-btn" id="source-to" data-value="fr">French</button>
-                        </div>
-                    </div>
+                    <button class="menu-btn js-menu-btn" id="detect-language">Detect Language</button>
                     <div class="custom-select">
-                        <button class="menu-btn select" id="from-select">More</button>
+                        <button class="menu-btn active select" id="from-select">English</button>
+                        <button class="menu-btn menu-btn--expand select" id="from-expand">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m7 10l5 5m0 0l5-5" />
+                            </svg>
+                        </button>
                         <div class="dropdown-group" id="dropdown-group">
                             <input class="search-dropdown" id="search-dropdown" type="text"
                                 placeholder="Search languages">
@@ -46,15 +46,15 @@
                     </svg>
                 </button>
                 <div class="translate-header bg-dark">
-                    <div class="overflow">
-                        <div>
-                            <button class="menu-btn js-menu-btn" id="target-from" data-value="en">English</button>
-                            <button class="menu-btn js-menu-btn sm-show active" id="target-to" data-value="fr">French</button>
-                        </div>
+                    <div class="custom-select">
+                        <button class="menu-btn active select" id="to-select">French</button>
+                        <button class="menu-btn menu-btn--expand select" id="to-expand">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m7 10l5 5m0 0l5-5" />
+                            </svg>
+                        </button>
                     </div>
-                    <span class="custom-select">
-                        <button class="menu-btn select" id="to-select">More</button>
-                    </span>
                 </div>
             </div>
             <div class="translate-container translate-container--body">

@@ -1,7 +1,7 @@
 :root {
     --clr-night: hsl(40, 7%, 8%);
-    --clr-night-o-99: hsla(40, 7%, 8%, 0.95);
     --clr-night-o-95: hsla(40, 7%, 8%, 0.85);
+    --clr-night-o-99: hsla(40, 7%, 8%, 0.95);
     --clr-engineering-orange: hsl(354, 99%, 38%);
     --clr-dim-gray: hsl(202, 4%, 44%);
     --clr-ash-gray: hsl(176, 15%, 81%);
@@ -80,10 +80,11 @@ li {
 }
 
 .active {
-    border-radius: .75rem;
-    background-color: var(--clr-ghost-white) !important;
-    color: var(--clr-night) !important;
-    transition: background-color 500ms ease-in;
+    /* border-radius: .75rem; */
+    /* background-color: var(--clr-ghost-white) !important; */
+    /* color: var(--clr-night) !important; */
+    color: var(--clr-ghost-white) !important;
+    transition: color 500ms ease-in;
 }
 
 .popover {
@@ -165,8 +166,7 @@ header {
 .translate-header {
     display: flex;
     width: calc(50% - 1.5rem);
-    padding: 1rem;
-    padding-bottom: 0;
+    padding: 1rem 1rem 0.5rem 1rem;
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
 }
@@ -224,8 +224,25 @@ header {
     cursor: pointer;
 }
 
-.custom-select>.select {
-    padding-right: 1rem;
+.menu-btn--expand {
+    display: inline-grid;
+    place-content: center;
+    width: 2rem;
+    padding: 0;
+    border-radius: 50%;
+    transition: transform 250ms;
+}
+
+.menu-btn--expand:hover {
+    background-color: var(--clr-dim-gray);
+}
+
+.selected+.menu-btn--expand {
+    transform: rotate(-180deg);
+}
+
+/* .custom-select>.select {
+    padding-right: 1.25rem;
     padding-bottom: 1rem;
     position: relative;
 }
@@ -235,13 +252,17 @@ header {
     display: inline-flex;
     position: absolute;
     top: 0.55rem;
-    right: 0;
+    right: 0.25rem;
     transition: 250ms;
 }
 
 .selected~.custom-select .select::after,
 .selected::after {
     transform: rotate(-180deg);
+} */
+
+.more-btn {
+    padding: 0;
 }
 
 .dropdown-group {
