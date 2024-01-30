@@ -237,29 +237,10 @@ header {
     background-color: var(--clr-dim-gray);
 }
 
-.selected+.menu-btn--expand {
+.selected~.menu-btn--expand,
+.menu-btn--expand.selected {
     transform: rotate(-180deg);
 }
-
-/* .custom-select>.select {
-    padding-right: 1.25rem;
-    padding-bottom: 1rem;
-    position: relative;
-}
-
-.custom-select>.select::after {
-    content: url('../assets/images/Expand_down.svg');
-    display: inline-flex;
-    position: absolute;
-    top: 0.55rem;
-    right: 0.25rem;
-    transition: 250ms;
-}
-
-.selected~.custom-select .select::after,
-.selected::after {
-    transform: rotate(-180deg);
-} */
 
 .more-btn {
     padding: 0;
@@ -268,10 +249,10 @@ header {
 .dropdown-group {
     display: none;
     width: 100%;
-    height: calc(100% - 3.65rem);
+    height: calc(100% - 3.5rem);
     padding-bottom: 0.75rem;
     position: absolute;
-    top: 3.65rem;
+    top: 3.5rem;
     left: 0;
     z-index: 2;
     border: 1px solid var(--clr-night-o-95);
@@ -599,10 +580,24 @@ header {
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        padding-block: 1.375rem;
+        padding-block: 1.2rem;
         border-radius: 0;
-        background-color: transparent;
-        color: var(--clr-ash-gray);
+        background: transparent !important;
+        color: var(--clr-ghost-white) !important;
+    }
+
+    .menu-btn:hover,
+    .menu-btn:focus-visible,
+    .selected {
+        color: var(--clr-ash-gray) !important;
+    }
+
+    .menu-btn:not(.menu-btn--switch, .sm-show) {
+        display: none !important;
+    }
+
+    .custom-select {
+        width: 100%;
     }
 
     .dropdown-group {
@@ -614,6 +609,7 @@ header {
 
     .dropdown {
         padding: 0;
+        height: calc(100% - 1.2rem);
     }
 
     .dropdown>li {
@@ -641,21 +637,6 @@ header {
 
     .translate-footer {
         padding-inline: 1rem;
-    }
-
-    .menu-btn {
-        background: transparent !important;
-        color: var(--clr-ash-gray) !important;
-    }
-
-    .menu-btn:hover,
-    .menu-btn:focus-visible,
-    .selected {
-        color: var(--clr-ghost-white) !important;
-    }
-
-    .menu-btn:not(.menu-btn--switch, .sm-show) {
-        display: none !important;
     }
 
     .btn--clear {

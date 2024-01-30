@@ -79,6 +79,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     // Menu language selection
     detectLanguage.addEventListener('click', () => {
         from = 'auto'
+        detectLanguage.classList.add('active')
         if (fromSelect.classList.contains('active'))
             fromSelect.classList.remove('active')
     })
@@ -96,15 +97,18 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
         if (!e.target.closest('.select') && !e.target.closest('#drodpown-group')
             && dropdownGroup.classList.contains('open') && !e.target.closest('.search-dropdown')
-            && !e.target.closest('.active') || e.target.closest('.custom-option')
-            || e.target.closest('#detect-language')) {
+            && !e.target.closest('.active') && !e.target.closest('.js-expand')
+            || e.target.closest('#detect-language') && dropdownGroup.classList.contains('open')
+            || e.target.closest('.custom-option')) {
             closeDropdown()
+            console.log('hi')
         }
     })
 
     // Custom dropdown
     const openDropdown = (targetDropdown) => {
-        if (targetDropdown.classList.contains('active'))
+        // if (!detectLanguage.classList.contains('active') && targetDropdown !== fromSelect)
+        if (!detectLanguage.classList.contains('active') || detectLanguage.classList.contains('active') && targetDropdown === toSelect)
             dropdownGroup.classList.toggle('open')
         if (document.querySelector('.selected'))
             document.querySelector('.selected').classList.remove('selected')
@@ -124,29 +128,34 @@ document.addEventListener('DOMContentLoaded', (e) => {
         document.querySelector('.selected').classList.remove('selected')
         refreshDropdown()
     }
-    fromSelect.addEventListener('click', () => {
-        openDropdown(fromSelect)
+    const fromDropdown = (element) => {
+        if (screen.width <= 840)
+            dropdown.children[0].style.display = 'block'
+        openDropdown(element)
         dropdownActive = 'from'
         if (detectLanguage.classList.contains('active')) {
             detectLanguage.classList.remove('active')
             fromSelect.classList.add('active')
         }
+    }
+    const toDropdown = () => {
+        if (screen.width <= 840)
+            dropdown.children[0].style.display = 'none'
+        openDropdown(toSelect)
+        dropdownActive = 'to'
+    }
+    fromSelect.addEventListener('click', () => {
+        fromSelect.classList.add('active')
+        fromDropdown(fromSelect)
     })
     fromExpand.addEventListener('click', () => {
-        openDropdown(fromSelect)
-        dropdownActive = 'from'
-        if (detectLanguage.classList.contains('active')) {
-            detectLanguage.classList.remove('active')
-            fromSelect.classList.add('active')
-        }
+        fromDropdown(fromExpand)
     })
     toSelect.addEventListener('click', () => {
-        openDropdown(toSelect)
-        dropdownActive = 'to'
+        toDropdown()
     })
     toExpand.addEventListener('click', () => {
-        openDropdown(toSelect)
-        dropdownActive = 'to'
+        toDropdown()
     })
     searchDropdown.addEventListener('keyup', (e) => {
         if (e.key === 'Escape') {
