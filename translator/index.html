@@ -23,7 +23,7 @@
                 <div class="translate-header">
                     <button class="menu-btn js-menu-btn" id="detect-language">Detect Language</button>
                     <div class="custom-select">
-                        <button class="menu-btn sm-show active select" id="from-select" type="button">English</button>
+                        <button class="menu-btn sm-show active select" id="from-select" type="button" data-value="en">English</button>
                         <button class="menu-btn menu-btn--expand js-expand" id="from-expand" type="button">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                 <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -32,7 +32,7 @@
                         </button>
                         <div class="dropdown-group" id="dropdown-group">
                             <div class="search-group">
-                                <button class="mobile-btn" type="button">
+                                <button class="dropdown-btn" type="button">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                                         <path fill="currentColor" fill-rule="evenodd"
                                             d="M14.75 8a.75.75 0 0 1-.75.75H3.81l2.72 2.72a.75.75 0 1 1-1.06 1.06l-4-4a.75.75 0 0 1 0-1.06l4-4a.75.75 0 0 1 1.06 1.06L3.81 7.25H14a.75.75 0 0 1 .75.75"
@@ -41,7 +41,7 @@
                                 </button>
                                 <input class="search-dropdown" id="search-dropdown" type="text"
                                     placeholder="Search languages">
-                                <button class="mobile-btn hidden" id="clear-search" type="button">
+                                <button class="dropdown-btn dropdown-btn--clear hidden" id="clear-search" type="button">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                         <path fill="currentColor"
                                             d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4" />
@@ -89,7 +89,7 @@
                     </div>
                     <div class="translate-footer">
                         <span class="controls">
-                            <span class="controls-btn controls-btn--listen hidden" id="from-listen">
+                            <button class="controls-btn controls-btn--listen hidden" id="from-listen" type="button">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                                     <g fill="none">
                                         <path fill="currentColor"
@@ -98,7 +98,7 @@
                                             d="M14.536 8.464a5 5 0 0 1 .027 7.044m4.094-9.165a8 8 0 0 1 .044 11.27" />
                                     </g>
                                 </svg>
-                            </span>
+                            </button>
                         </span>
                         <button class="translate-btn" id="translate-btn" type="button">
                             <span>
@@ -120,7 +120,7 @@
                     </div>
                     <div class="translate-footer">
                         <div class="controls">
-                            <span class="controls-btn controls-btn--listen hidden" id="to-listen">
+                            <button class="controls-btn controls-btn--listen hidden" id="to-listen" type="button">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                                     <g fill="none">
                                         <path fill="currentColor"
@@ -129,15 +129,15 @@
                                             d="M14.536 8.464a5 5 0 0 1 .027 7.044m4.094-9.165a8 8 0 0 1 .044 11.27" />
                                     </g>
                                 </svg>
-                            </span>
-                            <span class="controls-btn controls-btn--copy hidden" id="copy">
+                            </button>
+                            <button class="controls-btn controls-btn--copy hidden" id="copy" type="button">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
                                     <g transform="translate(20 0) scale(-1 1)">
                                         <path fill="currentColor"
                                             d="M6 6V2c0-1.1.9-2 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-4v4a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V8c0-1.1.9-2 2-2zm2 0h4a2 2 0 0 1 2 2v4h4V2H8zM2 8v10h10V8z" />
                                     </g>
                                 </svg>
-                            </span>
+                            </button>
                         </div>
                     </div>
                 </div>
