@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const fromExpand = document.getElementById('from-expand')
     const toExpand = document.getElementById('to-expand')
     const searchDropdown = document.getElementById('search-dropdown')
+    const clearSearch = document.getElementById('clear-search')
     const dropdownGroup = document.getElementById('dropdown-group')
     const dropdown = document.getElementById('dropdown')
     const fromText = document.getElementById('translate-text')
@@ -62,6 +63,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
             toText.value = result.trans
             loader.classList.add('hidden')
             loader.classList.remove('animate')
+            toListenBtn.classList.remove('hidden')
+            copyBtn.classList.remove('hidden')
         } catch (error) {
             console.error(error)
         }
@@ -74,6 +77,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
         // TRIAL
         toText.value = words
+        toListenBtn.classList.remove('hidden')
+        copyBtn.classList.remove('hidden')
     })
 
     // Menu language selection
@@ -98,16 +103,15 @@ document.addEventListener('DOMContentLoaded', (e) => {
         if (!e.target.closest('.select') && !e.target.closest('#drodpown-group')
             && dropdownGroup.classList.contains('open') && !e.target.closest('.search-dropdown')
             && !e.target.closest('.active') && !e.target.closest('.js-expand')
+            && !e.target.closest('#clear-search')
             || e.target.closest('#detect-language') && dropdownGroup.classList.contains('open')
             || e.target.closest('.custom-option')) {
             closeDropdown()
-            console.log('hi')
         }
     })
 
     // Custom dropdown
     const openDropdown = (targetDropdown) => {
-        // if (!detectLanguage.classList.contains('active') && targetDropdown !== fromSelect)
         if (!detectLanguage.classList.contains('active') || detectLanguage.classList.contains('active') && targetDropdown === toSelect)
             dropdownGroup.classList.toggle('open')
         if (document.querySelector('.selected'))
@@ -115,7 +119,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
         if (dropdownGroup.classList.contains('open'))
             targetDropdown.classList.toggle('selected')
         searchDropdown.value = ''
-        searchDropdown.focus()
+        if (screen.width > 840)
+            searchDropdown.focus()
     }
     const refreshDropdown = () => {
         Array.from(dropdown.children).forEach(option => {
@@ -130,7 +135,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     }
     const fromDropdown = (element) => {
         if (screen.width <= 840)
-            dropdown.children[0].style.display = 'block'
+            dropdown.children[0].classList.remove('hidden')
         openDropdown(element)
         dropdownActive = 'from'
         if (detectLanguage.classList.contains('active')) {
@@ -140,7 +145,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     }
     const toDropdown = () => {
         if (screen.width <= 840)
-            dropdown.children[0].style.display = 'none'
+            dropdown.children[0].classList.add('hidden')
         openDropdown(toSelect)
         dropdownActive = 'to'
     }
@@ -157,7 +162,11 @@ document.addEventListener('DOMContentLoaded', (e) => {
     toExpand.addEventListener('click', () => {
         toDropdown()
     })
-    searchDropdown.addEventListener('keyup', (e) => {
+    searchDropdown.addEventListener('input', (e) => {
+        if (searchDropdown.value.length > 0)
+            clearSearch.classList.remove('hidden')
+        else
+            clearSearch.classList.add('hidden')
         if (e.key === 'Escape') {
             closeDropdown()
         } else if (e.key === 'Enter') {
@@ -176,22 +185,13 @@ document.addEventListener('DOMContentLoaded', (e) => {
             dropdown.children[0].focus()
         }
     })
+    clearSearch.addEventListener('click', () => {
+        searchDropdown.value = ''
+        clearSearch.classList.add('hidden')
+    })
     window.addEventListener('keydown', (e) => {
         if (dropdownGroup.classList.contains('open') && e.key === 'Escape')
             dropdownGroup.classList.remove('open')
-    })
-    window.addEventListener('resize', () => {
-        if (screen.width <= 840) {
-            Array.from(dropdown.children).forEach((option) => {
-                if (option.getAttribute('data-value') === from) {
-                    sourceFrom.textContent = option.textContent
-                    sourceFrom.setAttribute('data-value', option.getAttribute('data-value'))
-                } else if (option.getAttribute('data-value') === to) {
-                    targetTo.textContent = option.textContent
-                    targetTo.setAttribute('data-value', option.getAttribute('data-value'))
-                }
-            })
-        }
     })
 
     // Textarea character count
@@ -205,28 +205,23 @@ document.addEventListener('DOMContentLoaded', (e) => {
             copyBtn.classList.add('hidden')
             toText.value = ''
             clearTextBtn.classList.add('hidden')
+            toListenBtn.classList.add('hidden')
+            copyBtn.classList.add('hidden')
         } else {
             fromListenBtn.classList.remove('hidden')
             clearTextBtn.classList.remove('hidden')
         }
         updateCharacterCount()
     })
-    // Show/hide control buttons
-    toText.addEventListener('selectionchange', () => {
-        if (toText.value.length === 0) {
-            toListenBtn.classList.add('hidden')
-            copyBtn.classList.add('hidden')
-        } else {
-            toListenBtn.classList.remove('hidden')
-            copyBtn.classList.remove('hidden')
-        }
-    })
     clearTextBtn.addEventListener('click', () => {
+        removePopover()
         fromText.value = ''
         toText.value = ''
         updateCharacterCount()
         fromListenBtn.classList.add('hidden')
         clearTextBtn.classList.add('hidden')
+        toListenBtn.classList.add('hidden')
+        copyBtn.classList.add('hidden')
     })
     clearTextBtn.addEventListener('mouseenter', () => {
         createPopover(clearTextBtn, 'Clear Text', 'bottom')
@@ -290,6 +285,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     }
     const synth = window.speechSynthesis
     const listen = (text, languageCode, listenBtn) => {
+        console.log('weee')
         listenBtn.classList.toggle('listening')
         let listenBtnActiveId = listenBtn.id
         if (synth.speaking) {
@@ -343,6 +339,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
                 createPopover(element, text, 'top')
             }
             fromListenBtn.addEventListener('click', () => {
+                listenHover(fromListenBtn, from)
                 removePopover()
                 if (ttsSupported)
                     listen(fromText.value, from, fromListenBtn)
@@ -354,6 +351,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
                 removePopover()
             })
             toListenBtn.addEventListener('click', () => {
+                listenHover(toListenBtn, to)
                 removePopover()
                 if (ttsSupported)
                     listen(toText.value, to, toListenBtn)
@@ -404,6 +402,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
         // Copy the selected text to the clipboard
         document.execCommand("copy")
 
+        // Deselect
         textarea.setSelectionRange(0, 0)
 
         createPopover(copyBtn, 'Copied', 'top')
